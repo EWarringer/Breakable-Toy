@@ -15,3 +15,28 @@
  *= require foundation_and_overrides
 
  */
+
+
+
+body {
+  background: image-url(twe_background) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+#questions-header {
+  color: #222222;
+  font-family:cursive;
+}
+//
+//
+// .space {
+//   display: block;
+//   margin-bottom: 200px;
+// }
+//
+// div {
+//   float: right;
+// }

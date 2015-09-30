@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require highcharts.js
+//= require chartkick
 //= require foundation
 //= require_tree .
 

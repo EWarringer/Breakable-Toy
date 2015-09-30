@@ -1,0 +1,33 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/controllers/questions_controller.rb": [
+        1,
+        null,
+        1,
+        7,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1443650768
+  }
+}

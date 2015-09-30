@@ -19,7 +19,9 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
+gem 'pry-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -33,6 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+
 end
 
 group :development do
@@ -43,7 +47,6 @@ group :development do
   gem 'spring'
 end
 
-
 gem 'rspec-rails', group: [:development, :test]
 gem 'capybara', group: [:development, :test]
 gem 'launchy', group: [:development, :test]
@@ -52,3 +55,9 @@ gem 'valid_attribute', group: [:development, :test]
 gem 'shoulda-matchers', group: [:development, :test], require: false
 gem 'devise'
 gem 'foundation-rails'
+gem "chartkick"
+gem 'highcharts-rails'
+
+group :test do
+  gem 'coveralls', require: false
+end
