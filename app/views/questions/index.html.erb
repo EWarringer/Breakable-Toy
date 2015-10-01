@@ -1,2 +1,36 @@
-<h1 id="questions-header" class="left">QUESTIONS</h1>
- <%= link_to "Profile", user_path(@user.id), class: "small button radius right" %>
+<h1 id="questions-header" class="small-8 left">QUESTIONS</h1>
+<% if user_signed_in? %>
+<%= link_to "Profile", user_path(@user.id), class: "small button radius right" %>
+
+<ul class="small-12">
+  <table>
+    <thead>
+      <tr>
+        <th class="small-6">Question</th>
+        <th width="small-3">user</th>
+        <th width="small-2">required skills</th>
+        <th width="small-1">time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+      </tr>
+      <tr>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+      </tr>
+      <tr>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>

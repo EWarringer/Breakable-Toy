@@ -23,11 +23,17 @@
         1,
         null,
         1,
-        7,
+        10,
+        null,
+        null
+      ],
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/controllers/users_controller.rb": [
+        1,
+        1,
         null,
         null
       ]
     },
-    "timestamp": 1443650768
+    "timestamp": 1443662481
   }
 }

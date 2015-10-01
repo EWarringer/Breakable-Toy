@@ -15,7 +15,7 @@ feature 'authenticated user views profile - ' %(
   scenario 'authenticated user is able to see profile' do
     sign_in
     visit root_path
-    click_link 'profile'
+    click_link 'Profile'
     expect(page).to have_content
   end
 

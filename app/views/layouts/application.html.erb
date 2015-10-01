@@ -26,6 +26,9 @@
     </section>
   </nav>
 
+  <div class="row">
+    <div class="small-12 column background-box">
+
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
       <%= value %>
@@ -34,6 +37,8 @@
 
   <%= yield %>
 
+    </div>
+  </div>
   <%= javascript_include_tag 'application' %>
   <%= yield :extra_footer %>
 </body>

@@ -16,7 +16,7 @@
 
  */
 
-
+$secondary-color: #f4eaea;
 
 body {
   background: image-url(twe_background) no-repeat center center fixed;
@@ -24,6 +24,13 @@ body {
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
+}
+
+.background-box {
+  background-color: $secondary-color;
+  border: 50px $secondary-color solid;
+  border-radius: 6px;
+  margin-top: 20px;
 }
 
 #questions-header {
