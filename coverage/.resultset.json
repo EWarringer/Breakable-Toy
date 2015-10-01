@@ -3,12 +3,12 @@
     "coverage": {
       "/Users/Erik/breakable-toy-related/breakable_toy/app/models/user.rb": [
         1,
+        1,
+        1,
+        null,
         null,
         null,
         1,
-        null,
-        1,
-        null,
         null,
         null
       ],
@@ -17,6 +17,14 @@
         null,
         null,
         1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        16,
+        null,
         null
       ],
       "/Users/Erik/breakable-toy-related/breakable_toy/app/controllers/questions_controller.rb": [
@@ -34,6 +42,6 @@
         null
       ]
     },
-    "timestamp": 1443662481
+    "timestamp": 1443677732
   }
 }

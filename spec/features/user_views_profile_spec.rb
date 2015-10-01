@@ -6,7 +6,7 @@ feature 'authenticated user views profile - ' %(
   so I can view my information'
 ) do
 
-  scenario 'authenticated user is able to see profile' do
+  scenario 'authenticated user is able to see profile button' do
     sign_in
     visit root_path
     expect(page).to have_content("Profile")
@@ -16,7 +16,7 @@ feature 'authenticated user views profile - ' %(
     sign_in
     visit root_path
     click_link 'Profile'
-    expect(page).to have_content
+    expect(page).to have_content ("USERS SHOW")
   end
 
   scenario 'unauthenticated user cannot view profile' do
