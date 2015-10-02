@@ -9,4 +9,4 @@
 - skills table with proper columns (ER diagram below)
 
 ## _Current ER Diagram_
-![alt](http://i.imgur.com/D0DrwO7.png)
+![alt](http://i.imgur.com/rk1HRP7.png)
