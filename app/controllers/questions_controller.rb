@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
 
   def index
-    @user = current_user
+    @categories = Category.all
+    @skills = Skill.all
   end
 end

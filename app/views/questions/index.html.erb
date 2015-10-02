@@ -1,55 +1,26 @@
-<h1 id="questions-header" class="small-8 left">QUESTIONS</h1>
-<% if user_signed_in? %>
-<%= link_to "Profile", user_path(@user.id), class: "small button radius right" %>
-
-
-<ul class="small-block-grid-2 large-block-grid-6">
-  <li>a list item1</li>
-  <li>a list item2</li>
-  <li>a list item3</li>
-  <li>a list item4</li>
-  <li>a list item5</li>
-  <li>a list item6</li>
-  <li>a list item7</li>
-  <li>a list item8</li>
-  <li>a list item9</li>
-  <li>a list item10</li>
-  <li>a list item11</li>
-  <li>a list item12</li>
-</ul>
-
-
-
-
-
-  <!-- <table>
-    <thead>
-      <tr>
-        <th class="small-6">Question</th>
-        <th width="small-3">user</th>
-        <th width="small-2">required skills</th>
-        <th width="small-1">time</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Content Goes Here</td>
-        <td>Content Goes Here</td>
-        <td>Content Goes Here</td>
-        <td>Content Goes Here</td>
-      </tr>
-      <tr>
-        <td>Content Goes Here</td>
-        <td>Content Goes Here</td>
-        <td>Content Goes Here</td>
-        <td>Content Goes Here</td>
-      </tr>
-      <tr>
-        <td>Content Goes Here</td>
-        <td>Content Goes Here</td>
-        <td>Content Goes Here</td>
-        <td>Content Goes Here</td>
-      </tr>
-    </tbody>
-  </table> -->
-<% end %>
+<div class="small-12 column background-box">
+  <% if user_signed_in? %>
+  <%= link_to "Profile", user_path(current_user.id), class: "small button radius right" %>
+  <% end %>
+  <div class="row">
+    <div class="small-centered">
+      <img src="http://i.imgur.com/SjSTIWz.png" alt="freeLanswers" style="width:250px;height:74px;">
+    </div>
+  </div>
+</div>
+<div class="small-12 column background-box">
+  <ul class="accordion" data-accordion role="tablist">
+    <% @categories.each do |category| %>
+      <li class="accordion-navigation">
+        <a href="#panel<%= category.id %>d" role="tab" id="panel<%= category.id %>d-heading" aria-controls="panel<%= category.id %>d"><%= category.name %></a>
+        <div id="panel<%= category.id %>d" class="content circle" role="tabpanel" aria-labelledby="panel<%= category.id %>d-heading">
+          <ul class="small-block-grid-4">
+            <% category.skills.each do |skill| %>
+            <li class="skill-list"><%= skill.name %></li>
+            <% end %>
+          </ul>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

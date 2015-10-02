@@ -16,7 +16,7 @@
 
  */
 
-$secondary-color: #f4eaea;
+$secondary-color: white;
 
 body {
   background: image-url(twe_background) no-repeat center center fixed;
@@ -33,17 +33,10 @@ body {
   margin-top: 20px;
 }
 
-#questions-header {
-  color: #222222;
-  font-family:cursive;
+#panel2-1, #panel2-2 {
+  padding: 0;
 }
-//
-//
-// .space {
-//   display: block;
-//   margin-bottom: 200px;
-// }
-//
-// div {
-//   float: right;
-// }
+
+.skill-list {
+  font-size: 6pt;
+}

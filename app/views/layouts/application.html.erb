@@ -27,8 +27,6 @@
   </nav>
 
   <div class="row">
-    <div class="small-12 column background-box">
-
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
       <%= value %>
@@ -36,10 +34,11 @@
   <%- end -%>
 
   <%= yield %>
-
-    </div>
+  
   </div>
   <%= javascript_include_tag 'application' %>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
   <%= yield :extra_footer %>
 </body>
 </html>

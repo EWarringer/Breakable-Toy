@@ -16,7 +16,7 @@ feature 'authenticated user views profile - ' %(
     sign_in
     visit root_path
     click_link 'Profile'
-    expect(page).to have_content ("USERS SHOW")
+    expect(page).to have_content ("- USER PROFILE -")
   end
 
   scenario 'unauthenticated user cannot view profile' do
