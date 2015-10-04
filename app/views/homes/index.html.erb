@@ -1,3 +1,12 @@
-<h1>HOMES INDEX</h1>
+<div class="small-12 column background-box">
+  <% if user_signed_in? %>
+  <%= link_to "Profile", user_path(current_user.id), class: "small button radius right" %>
+  <% end %>
+  <div class="small-centered">
+    <img src="http://i.imgur.com/SjSTIWz.png" alt="freeLanswers" style="width:250px;height:74px;">
+  </div>
+</div>
 
-<%= link_to "Profile", user_path(current_user) %>
+<div class="small-12 column background-box">
+
+</div>

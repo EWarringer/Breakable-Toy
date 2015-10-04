@@ -1,0 +1,3 @@
+<li class="skill-item">
+    <%= link_to skill.name, skill_user_skills_path(skill), method: :post, class:"skill-list" %>
+</li>

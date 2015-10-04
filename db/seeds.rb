@@ -19,6 +19,15 @@ language = Category.create!(name: "Translation & Languages")
 handy_work = Category.create!(name: "Local Jobs & Services")
 other = Category.create!(name: "Other")
 
+User.create(
+  email: "ewarringer@gmail.com",
+  first_name: "Erik",
+  last_name: "Warringer",
+  username: "Ewarringer",
+  password: "something",
+  password_confirmation: "something"
+)
+
 
 SkillSeed.dev_skills.each do |skill|
   Skill.create!(name: skill, category: dev)

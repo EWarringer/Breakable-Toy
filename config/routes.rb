@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  root 'questions#index'
+  root 'homes#index'
   devise_for :users
 
-  resources :questions, only: [:index]
   resources :users, only: [:show]
+  resources :skills, only: [:index] do
+    resources :user_skills, only: [:create]
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
