@@ -1,8 +1,5 @@
 # Breakable-Toy: FreelAnswers
 
-## _Current ER Diagram_
-![alt](http://i.imgur.com/2K6eoij.png)
-
 ## Progress
 ### Homes index page
 *logo
@@ -18,9 +15,12 @@
 *white inner background across website
 *freeLancer logo image
 
-#### Next Step: Skills migration
+## Next Step: Skills migration
 *link to 'all skills'(skills index) on home page (homes index)
 *link to 'select your skills'(skills index) on profile page(user show)
 *rspec tests
 *make it so clicking a skill adds it to the user-skills table for the current_user
 *make it so you can see which skills have already been chosen.
+
+## _Current ER Diagram_
+![alt](http://i.imgur.com/2K6eoij.png)
