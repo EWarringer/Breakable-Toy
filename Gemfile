@@ -47,5 +47,3 @@ group :test do
   gem 'coveralls', require: false
   gem 'poltergeist'
 end
-
-ruby "2.2.0"
