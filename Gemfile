@@ -22,6 +22,7 @@ gem 'highcharts-rails'
 gem 'simple_form'
 gem 'kaminari'
 gem 'selenium-webdriver'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -45,9 +46,6 @@ end
 group :test do
   gem 'coveralls', require: false
   gem 'poltergeist'
-  gem 'database_cleaner'
 end
 
-group :production do
-  gem 'rails_12factor'
-end
+ruby "2.2.0"
