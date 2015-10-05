@@ -6,7 +6,7 @@ class UserSkillsController < ApplicationController
       skill_id: user_skill_params[:skillId]
     )
 
-    render json: { userSkills: UserSkill.where(user: current_user) }
+    render json: user_skill.skill
   end
 
   private

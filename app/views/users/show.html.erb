@@ -3,7 +3,20 @@
     <h1> <%= current_user.username %>  </h1>
     <div class="real-name">Name: <%= current_user.first_name %> <%= current_user.last_name %></div>
     <div class="user-email">Email: <%= current_user.email %></div>
+    <%= link_to "Home", root_path, class: "small button radius left"  %>
+    <%= link_to "Add to your skills list", skills_path, class: "small button radius", style: "margin-left:5px;" %>
+    <div class="small-12">
+    <section class="block-list">
+      <header>Your Skills</header>
+      <ul id="ajax-list">
+        <% @userskills.each do |userskill| %>
+        <li><%= userskill.skill.name %></li>
+        <% end %>
+      </ul>
+    </section>
+    </div>
   </div>
+
   <div class="charts block small-12 large-8 right">
     <ul class="tabs" data-tab role="tablist">
       <li class="tab-title active" role="presentation"><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2-1">Monthly</a></li>

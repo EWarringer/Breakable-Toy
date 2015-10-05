@@ -12,11 +12,10 @@ feature 'user adds skills to profile - ' %(
     expect(page).to have_content("skills")
   end
 
-  scenario 'user adds a skill and can see it on their skills list' do
+  scenario 'user adds a skill and can see it on their skills list', js: true do
     sign_in
-    click_link
-    fill_in "skills", with: "ruby"
-    click_button "Add Skill"
-    expect(page).to have_content("Ruby")
+    visit skills_path
+    click_link "Other"
+    save_and_open_page
   end
 end

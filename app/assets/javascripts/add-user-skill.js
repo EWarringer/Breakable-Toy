@@ -12,7 +12,7 @@ $(".a-skill").click(function(e) {
           userId: userId, skillId: skillId
         } }
       }).done(function(resp) {
-
-        $("#ajax-list").html('<% j (resp.each do |userskill|) %>')
+        // debugger;
+        $("#ajax-list").append('<li>' + resp.name + '</li>')
       });
 });

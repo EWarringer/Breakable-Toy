@@ -23,25 +23,54 @@
         1,
         null,
         1,
-        20,
+        5,
         null,
         null
       ],
-      "/Users/Erik/breakable-toy-related/breakable_toy/app/controllers/questions_controller.rb": [
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/controllers/homes_controller.rb": [
         1,
-        null,
         1,
-        12,
         null,
         null
       ],
       "/Users/Erik/breakable-toy-related/breakable_toy/app/controllers/users_controller.rb": [
         1,
         1,
+        1,
         null,
+        null
+      ],
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/models/user_skill.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/controllers/skills_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/models/category.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/models/skill.rb": [
+        1,
+        1,
+        1,
+        1,
         null
       ]
     },
-    "timestamp": 1443735562
+    "timestamp": 1444073446
   }
 }

@@ -14,9 +14,9 @@ feature 'authenticated user views profile - ' %(
 
   scenario 'authenticated user is able to see profile' do
     sign_in
-    visit root_path
+    visit skills_path
     click_link 'Profile'
-    expect(page).to have_content ("- USER PROFILE -")
+    expect(page).to have_content ("Add to your skills list")
   end
 
   scenario 'unauthenticated user cannot view profile' do

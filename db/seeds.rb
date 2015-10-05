@@ -28,6 +28,23 @@ User.create(
   password_confirmation: "something"
 )
 
+User.create(
+  email: "mrexample3000@gmail.com",
+  first_name: "Zample",
+  last_name: "Exampleton",
+  username: "MrExample",
+  password: "something",
+  password_confirmation: "something"
+)
+
+User.create(
+  email: "jazzmaster7@gmail.com",
+  first_name: "Miles",
+  last_name: "Davis",
+  username: "MilesDavis52",
+  password: "something",
+  password_confirmation: "something"
+)
 
 SkillSeed.dev_skills.each do |skill|
   Skill.create!(name: skill, category: dev)
