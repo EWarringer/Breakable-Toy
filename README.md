@@ -1,7 +1,6 @@
 [![Coverage Status](https://coveralls.io/repos/EWarringer/Breakable-Toy/badge.svg?branch=master&service=github)](https://coveralls.io/github/EWarringer/Breakable-Toy?branch=master)
 [![Code Climate](https://codeclimate.com/github/EWarringer/Breakable-Toy/badges/gpa.svg)](https://codeclimate.com/github/EWarringer/Breakable-Toy)
 [![Test Coverage](https://codeclimate.com/github/EWarringer/Breakable-Toy/badges/coverage.svg)](https://codeclimate.com/github/EWarringer/Breakable-Toy/coverage)
-Heroku App: https://radiant-island-3547.herokuapp.com/ (Unfinished)
 
 # Breakable-Toy: FreelAnswers
 ##(Under Construction!)
