@@ -1,0 +1,15 @@
+<%= form_for @question do |f| %>
+  <%= render "layouts/form_errors", object: f.object %>
+
+  <div class="small-12 medium-7 column">
+    <%= f.label :Question %>
+    <%= f.text_field :body %>
+  </div>
+
+  <div class="small-12 column">
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: 10 %>
+    <%= f.submit "Submit", class: "button radius" %>
+  </div>
+
+<% end %>

@@ -25,7 +25,7 @@
       <ul class="accordion" data-accordion role="tablist">
         <% @categories.each do |category| %>
           <li class="accordion-navigation">
-            <a href="#panel<%= category.id %>d" role="tab" id="panel<%= category.id %>d-heading" aria-controls="panel<%= category.id %>d"><%= category.name %></a>
+            <a href="#panel<%= category.id %>d" class="skill-panel" role="tab" id="panel<%= category.id %>d-heading" aria-controls="panel<%= category.id %>d"><%= category.name %></a>
             <div id="panel<%= category.id %>d" class="content circle" role="tabpanel" aria-labelledby="panel<%= category.id %>d-heading">
               <ul class="small-block-grid-4">
                 <% category.skills.each do |skill| %>

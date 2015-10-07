@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.0.0'
 
 gem 'rails', '4.2.4'
 gem 'pg'
@@ -26,6 +26,7 @@ gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'dotenv-rails'
   gem 'byebug'
   gem 'database_cleaner'
   gem 'pry-rails'

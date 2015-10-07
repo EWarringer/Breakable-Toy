@@ -1,4 +1,3 @@
-$(".accordion").on("click", "dd", function (event) {
-$("div.active").slideToggle("slow");
-$(this).find(".content").slideToggle("slow");
+$(".accordion-navigation").on("click", ".skill-panel", function (event) {
+$(this).closest(".accordion-navigation").find(".content").slideToggle("slow");
 });

@@ -1,20 +1,39 @@
 <div class="small-12 column background-box">
   <div class="small-12 large-4 left">
-    <h1> <%= current_user.username %>  </h1>
-    <div class="real-name">Name: <%= current_user.first_name %> <%= current_user.last_name %></div>
-    <div class="user-email">Email: <%= current_user.email %></div>
-    <%= link_to "Home", root_path, class: "small button radius left"  %>
-    <%= link_to "Add to your skills list", skills_path, class: "small button radius", style: "margin-left:5px;" %>
-    <div class="small-12">
-    <section class="block-list">
-      <header>Your Skills</header>
-      <ul id="ajax-list">
-        <% @userskills.each do |userskill| %>
-        <li><%= userskill.skill.name %></li>
-        <% end %>
-      </ul>
-    </section>
-    </div>
+    <h1> <%= @user.username %>  </h1>
+    <div class="real-name">Name: <%= @user.first_name %> <%= @user.last_name %></div>
+    <div class="user-email">Email: <%= @user.email %></div>
+    <% if @user == current_user %>
+      <%= link_to "Home", root_path, class: "small button radius left"  %>
+      <%= link_to "Add to your skills list", skills_path, class: "small button radius", style: "margin-left:5px;" %>
+      <div class="small-12">
+        <section class="block-list">
+          <header>Your Skills</header>
+          <ul id="ajax-list">
+            <% @userskills.each do |userskill| %>
+            <li><%= userskill.skill.name %>: <%= userskill.endorsements.count %></li>
+            <% end %>
+          </ul>
+        </section>
+      </div>
+    <% else %>
+      <%= link_to "Home", root_path, class: "small button radius left"  %>
+      <%= link_to "Your Profile", user_path(current_user.id), class: "small button radius", style: "margin-left:5px;" %>
+      <div class="small-12">
+        <section class="block-list">
+          <header><%= @user.username %>'s Skills</header>
+          <ul id="ajax-list">
+            <% @userskills.each do |userskill| %>
+            <li id="endorsements-<%= userskill.id %>"><%= userskill.skill.name %>: <%= userskill.endorsements.count %> </li>
+            <a href="#" class="profile-skill" user-id="<%= current_user.id %>"
+              userskill-id="<%= userskill.id %>"
+              id="user-skill-<%= userskill.id %>" >Endorse</a>
+            <br>
+            <% end %>
+          </ul>
+        </section>
+      </div>
+    <% end %>
   </div>
 
   <div class="charts block small-12 large-8 right">

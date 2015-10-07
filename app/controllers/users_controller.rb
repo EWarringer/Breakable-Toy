@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
+  def index
+    @users = User.all
+  end
+
   def show
-    @userskills = UserSkill.where(user: current_user)
+    @user = User.find_by(id: params[:id])
+    @userskills = UserSkill.where(user: @user)
   end
 end
