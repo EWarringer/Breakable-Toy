@@ -10,4 +10,18 @@ FactoryGirl.define do
     password_confirmation 'password'
   end
 
+  factory :category do
+    sequence(:name) {|n| "category#{n}" }
+  end
+
+  factory :skill do
+    sequence(:name) {|n| "skill#{n}" }
+    category
+  end
+
+  factory :user_skill do
+    user
+    skill
+  end
+
 end

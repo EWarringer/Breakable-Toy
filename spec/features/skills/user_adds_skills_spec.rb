@@ -1,21 +1,17 @@
 require 'rails_helper'
 
 feature 'user adds skills to profile - ' %(
-  'As a user
+  'As a skilled User
   I want to be able to add skills to my profile
-  so I can show the public what I know'
+  so that I can help users with questions in my field of expertise'
 ) do
 
-  scenario 'user visits profile and sees the skills text' do
-    sign_in
-    click_link "Profile"
-    expect(page).to have_content("skills")
+  scenario 'user visits skills page and views list of skills', js: true do
+
   end
 
-  scenario 'user adds a skill and can see it on their skills list', js: true do
-    sign_in
-    visit skills_path
-    click_link "Other"
-    save_and_open_page
+  scenario 'user clicks a skill and it is added to their list of skills' do
+
   end
+
 end
