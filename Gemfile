@@ -21,14 +21,12 @@ gem "chartkick"
 gem 'highcharts-rails'
 gem 'simple_form'
 gem 'kaminari'
-gem 'selenium-webdriver'
 gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'dotenv-rails'
   gem 'byebug'
-  gem 'database_cleaner'
   gem 'pry-rails'
   gem 'faker'
 end
@@ -47,4 +45,6 @@ end
 group :test do
   gem 'coveralls', require: false
   gem 'poltergeist'
+  gem 'database_cleaner'
+
 end
