@@ -9,12 +9,16 @@
 dev = Category.create!(name: "Web developer, IT & Software")
 mobile = Category.create!(name: "Mobile Phones & Computing")
 writing = Category.create!(name: "Writing & Content")
-design_media_and_architecture = Category.create!(name: "Design, Media & Architecture")
+design_media_and_architecture = Category.create!(name: "Design,"\
+" Media & Architecture")
 data_entry = Category.create!(name: "Data Entry & Admin")
-engineering_and_science = Category.create!(name: "Engineering & Science")
-manufacturing = Category.create!(name: "Product Sourcing & Manufacturing")
+engineering_and_science = Category.create!(name: "Engineering"\
+" & Science")
+manufacturing = Category.create!(name: "Product Sourcing"\
+" & Manufacturing")
 sales = Category.create!(name: "Sales & Marketing")
-business_legal = Category.create!(name: "Business, Accounting, Human Resources & Legal")
+business_legal = Category.create!(name: "Business,"\
+" Accounting, Human Resources & Legal")
 language = Category.create!(name: "Translation & Languages")
 handy_work = Category.create!(name: "Local Jobs & Services")
 other = Category.create!(name: "Other")
@@ -56,7 +60,8 @@ SkillSeed.writing_skills.each do |skill|
   Skill.create!(name: skill, category: writing)
 end
 SkillSeed.design_media_and_architecture_skills.each do |skill|
-  Skill.create!(name: skill, category: design_media_and_architecture)
+  Skill.create!(name: skill,
+  category: design_media_and_architecture)
 end
 SkillSeed.data_entry_skills.each do |skill|
   Skill.create!(name: skill, category: data_entry)

@@ -8,12 +8,63 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null,
         1,
         null,
         null,
+        null
+      ],
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/models/category.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/models/endorsement.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/models/question_skill.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/models/question.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/models/skill.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Erik/breakable-toy-related/breakable_toy/app/models/user_skill.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/Erik/breakable-toy-related/breakable_toy/app/controllers/application_controller.rb": [
@@ -27,7 +78,7 @@
         1,
         null,
         1,
-        21,
+        18,
         null,
         null
       ],
@@ -48,41 +99,8 @@
         2,
         null,
         null
-      ],
-      "/Users/Erik/breakable-toy-related/breakable_toy/app/models/user_skill.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/Erik/breakable-toy-related/breakable_toy/app/controllers/skills_controller.rb": [
-        1,
-        1,
-        2,
-        2,
-        2,
-        null,
-        null
-      ],
-      "/Users/Erik/breakable-toy-related/breakable_toy/app/models/category.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/Erik/breakable-toy-related/breakable_toy/app/models/skill.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null
       ]
     },
-    "timestamp": 1444229687
+    "timestamp": 1444263891
   }
 }

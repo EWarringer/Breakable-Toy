@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  it { should have_many(:questions) }
+  it { should have_many(:skills).through(:user_skills) }
+  it { should have_many(:user_skills) }
+  it { should have_many(:endorsements) }
+
   it { should have_valid(:first_name).when('John', 'Sally') }
   it { should_not have_valid(:first_name).when(nil, '') }
 

@@ -13,7 +13,9 @@ $(".profile-skill").click(function(e) {
         } }
       }).done(function(resp) {
         debugger
-        $("#endorsements-" + userSkillId).html( resp.skill + ": " + resp.count);
-        $("#user-skill-" + userSkillId).html( resp.endorseButton );
+        $("#endorsements-" + userSkillId).
+        html( resp.skill + ": " + resp.count);
+        $("#user-skill-" + userSkillId).
+        html( resp.endorseButton );
       });
 });

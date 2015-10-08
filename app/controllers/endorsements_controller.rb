@@ -6,7 +6,8 @@ class EndorsementsController < ApplicationController
       user_skill_id: endorsement_params[:userSkillId]
     )
     if endorsement.nil?
-      Endorsement.create(user_id: endorsement_params[:userId], user_skill_id: endorsement_params[:userSkillId])
+      Endorsement.create(user_id: endorsement_params[:userId],
+       user_skill_id: endorsement_params[:userSkillId])
       endorse_button = "Unendorse"
     else
       endorsement.destroy
@@ -14,7 +15,9 @@ class EndorsementsController < ApplicationController
     end
 
     user_skill = UserSkill.find_by(id: endorsement_params[:userSkillId])
-    render json: {skill: user_skill.skill.name, count: user_skill.endorsements.count, endorseButton: endorse_button}
+    render json: {skill: user_skill.skill.name,
+      count: user_skill.endorsements.count,
+      endorseButton: endorse_button}
   end
 
   private
