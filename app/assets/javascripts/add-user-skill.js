@@ -12,6 +12,6 @@ $(".a-skill").click(function(e) {
           userId: userId, skillId: skillId
         } }
       }).done(function(resp) {
-        $("#ajax-list").append('<li>' + resp.name + '</li>')
+        $("#ajax-list").append("<li>" + resp.name + "</li>")
       });
 });
