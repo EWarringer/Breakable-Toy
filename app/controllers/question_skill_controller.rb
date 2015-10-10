@@ -1,3 +1,3 @@
-class Question < ActiveRecord::Base
+class QuestionSkill < ActiveRecord::Base
 
 end

@@ -1,0 +1,32 @@
+$base        : #AAAAAA;
+$secondary-color: white;
+
+.side-bar {
+  background-color: $secondary-color;
+  border: 25px $secondary-color solid;
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+#fl-img-sidebar {
+border-bottom-color: black;
+border-bottom-style: dotted;
+}
+
+#panel2-1, #panel2-2 {
+  padding: 0;
+}
+
+.skill-select {
+font-family: monospace;
+}
+
+li.skill-item {
+  padding-bottom: 0px;
+  margin-bottom: 5px
+}
+
+.skill-item:hover {
+  background-color: $base;
+}

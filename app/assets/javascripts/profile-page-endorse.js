@@ -12,7 +12,6 @@ $(".profile-skill").click(function(e) {
           userId: userId, userSkillId: userSkillId
         } }
       }).done(function(resp) {
-        debugger
         $("#endorsements-" + userSkillId).
         html( resp.skill + ": " + resp.count);
         $("#user-skill-" + userSkillId).

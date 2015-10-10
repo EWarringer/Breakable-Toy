@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
   <title>FreelAnswers</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -27,18 +27,20 @@
   </nav>
 
   <div class="row">
-  <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
-      <%= value %>
+    <div class=".flash-messages">
+      <%- flash.each do |key, value| -%>
+        <div class="flash flash-<%= key %>">
+          <%= value %>
+        </div>
+      <%- end -%>
     </div>
-  <%- end -%>
 
   <%= yield %>
 
   </div>
   <%= javascript_include_tag 'application' %>
-  <!-- <script src="http://code.highcharts.com/highcharts.js"></script> -->
-  <!-- <script src="http://code.highcharts.com/modules/exporting.js"></script> -->
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
   <%= yield :extra_footer %>
 </body>
 </html>
