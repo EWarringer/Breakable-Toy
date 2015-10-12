@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
   resources :skills, only: [:index] do
     resources :user_skills, only: [:create]
+    resources :question_skills, only: [:create]
   end
   resources :endorsements, only: [:create]
 

@@ -1,15 +1,16 @@
-$(".a-skill").click(function(e) {
+$(".b-skill").click(function(e) {
   e.preventDefault();
   var $this = $(this);
   var skillId = $this.attr("skill-id");
-  var userId = $this.attr("user-id");
+  var questionId = $this.attr("question-id");
+  debugger
 
   $.ajax({
         method: "POST",
-        url: "/skills/" + skillId + "/user_skills",
+        url: "/skills/" + skillId + "/question_skills",
         dataType: "json",
-        data: { userSkill: {
-          userId: userId, skillId: skillId
+        data: { questionSkill: {
+          questionId: questionId, skillId: skillId
         } }
       }).done(function(resp) {
         $("#ajax-list").append("<li>" + resp.name + "</li>")

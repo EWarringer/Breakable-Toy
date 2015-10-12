@@ -10,5 +10,9 @@
 </div>
 
 <div class="small-12 column background-box">
-  <%= link_to "Ask a question now!", new_question_path, {class: "button expand"} %>
+  <div> posted by <%= @question.user.username %> on <%= @question.created_at %></div>
+
+  <h2> <%= @question.body %> </h2>
+
+  <h3> <%= @question.description %> </h3>
 </div>
