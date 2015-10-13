@@ -16,6 +16,8 @@
 //= require highcharts.js
 //= require chartkick
 //= require foundation
+//= require chat
+//= require private_pub
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

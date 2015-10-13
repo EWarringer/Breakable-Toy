@@ -3,7 +3,6 @@ $(".b-skill").click(function(e) {
   var $this = $(this);
   var skillId = $this.attr("skill-id");
   var questionId = $this.attr("question-id");
-  debugger
 
   $.ajax({
         method: "POST",

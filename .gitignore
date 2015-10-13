@@ -14,3 +14,4 @@
 /coverage
 /public/uploads/*
 /app/assets/javascripts/highcharts/*
+.env

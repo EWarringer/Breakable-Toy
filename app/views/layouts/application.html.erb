@@ -4,6 +4,7 @@
   <title>FreelAnswers</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
+  <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
 </head>
 <body>
 
@@ -39,8 +40,6 @@
 
   </div>
   <%= javascript_include_tag 'application' %>
-  <script src="http://code.highcharts.com/highcharts.js"></script>
-  <script src="http://code.highcharts.com/modules/exporting.js"></script>
   <%= yield :extra_footer %>
 </body>
 </html>
