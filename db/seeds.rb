@@ -136,21 +136,21 @@ SkillSeed.other_skills.each do |skill|
 end
 
 
-UserSkill.create(user_id: 1, skill_id: 7) #AJAX
-UserSkill.create(user_id: 1, skill_id: 79) #eCommerce
-UserSkill.create(user_id: 1, skill_id: 138) #Javascript
-UserSkill.create(user_id: 1, skill_id: 222) #Ruby on Rails
-UserSkill.create(user_id: 1, skill_id: 251) #SQL
-UserSkill.create(user_id: 1, skill_id: 497) #Excel
-UserSkill.create(user_id: 1, skill_id: 501) #Microsoft Office
-UserSkill.create(user_id: 1, skill_id: 602) #eBay
-UserSkill.create(user_id: 1, skill_id: 604) #Etsy
-UserSkill.create(user_id: 1, skill_id: 595) #Affiliate Marketing
-UserSkill.create(user_id: 1, skill_id: 605) #Facebook Marketing
-UserSkill.create(user_id: 1, skill_id: 836) #History
-UserSkill.create(user_id: 1, skill_id: 644) #Payroll
-UserSkill.create(user_id: 1, skill_id: 177) #node.js
-UserSkill.create(user_id: 1, skill_id: 120) #Heroku
+UserSkill.create(user_id: 1, skill_id: 7) # AJAX
+UserSkill.create(user_id: 1, skill_id: 79) # eCommerce
+UserSkill.create(user_id: 1, skill_id: 138) # Javascript
+UserSkill.create(user_id: 1, skill_id: 222) # Ruby on Rails
+UserSkill.create(user_id: 1, skill_id: 251) # SQL
+UserSkill.create(user_id: 1, skill_id: 497) # Excel
+UserSkill.create(user_id: 1, skill_id: 501) # Microsoft Office
+UserSkill.create(user_id: 1, skill_id: 602) # eBay
+UserSkill.create(user_id: 1, skill_id: 604) # Etsy
+UserSkill.create(user_id: 1, skill_id: 595) # Affiliate Marketing
+UserSkill.create(user_id: 1, skill_id: 605) # Facebook Marketing
+UserSkill.create(user_id: 1, skill_id: 836) # History
+UserSkill.create(user_id: 1, skill_id: 644) # Payroll
+UserSkill.create(user_id: 1, skill_id: 177) # node.js
+UserSkill.create(user_id: 1, skill_id: 120) # Heroku
 
 UserSkill.create(user_id: 2, skill_id: 7)
 UserSkill.create(user_id: 2, skill_id: 138)
