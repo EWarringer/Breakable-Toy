@@ -9,6 +9,12 @@ AccessorMethodName:
 ActionFilter:
   Enabled: false
 
+javascript:
+  enabled: false
+
+scss:
+  enabled: false
+
 Alias:
   Enabled: false
 
