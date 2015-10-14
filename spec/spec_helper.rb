@@ -1,5 +1,3 @@
-require 'coveralls'
-Coveralls.wear!('rails')
 require_relative 'support/user_sign_in_helper.rb'
 include UserSignIn
 

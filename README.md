@@ -1,5 +1,5 @@
 [ ![Codeship Status for EWarringer/Breakable-Toy](https://codeship.com/projects/6835fdc0-42b4-0133-38f3-1eb5f82d52fc/status?branch=master)](https://codeship.com/projects/103850)
-[![Coverage Status](https://coveralls.io/repos/EWarringer/Breakable-Toy/badge.svg?branch=master&service=github)](https://coveralls.io/github/EWarringer/Breakable-Toy?branch=master)
+
 [![Code Climate](https://codeclimate.com/github/EWarringer/Breakable-Toy/badges/gpa.svg)](https://codeclimate.com/github/EWarringer/Breakable-Toy)
 
 
