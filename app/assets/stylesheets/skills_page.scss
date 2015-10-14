@@ -1,5 +1,5 @@
-$base        : #AAAAAA;
-$secondary-color: white;
+$base        : #aaaaaa;
+$secondary-color: #ffffff;
 
 .side-bar {
   background-color: $secondary-color;
@@ -9,22 +9,18 @@ $secondary-color: white;
   padding: 0;
 }
 
-#fl-img-sidebar {
-border-bottom-color: black;
-border-bottom-style: dotted;
-}
-
-#panel2-1, #panel2-2 {
-  padding: 0;
+.fl-img-sidebar {
+  border-bottom-color: #000000;
+  border-bottom-style: dotted;
 }
 
 .skill-select {
-font-family: monospace;
+  font-family: monospace;
 }
 
-li.skill-item {
-  padding-bottom: 0px;
-  margin-bottom: 5px
+.skill-item {
+  margin-bottom: 5px;
+  padding-bottom: 0;
 }
 
 .skill-item:hover {

@@ -1,41 +1,52 @@
 <div class="small-12 column background-box">
   <% if user_signed_in? %>
-  <%= link_to "Profile", user_path(current_user.id), class: "small button radius right" %>
-  <%= link_to "List of skills", skills_path, class: "small button radius right", style: "margin-right:5px;" %>
-  <%= link_to "All Users", users_path, class: "small button radius right", style: "margin-right:5px;" %>
+  <%= link_to "Profile", user_path(current_user.id),
+  class: "small button radius right" %>
+  <%= link_to "List of skills", skills_path,
+  class: "small button radius right", style: "margin-right:5px;" %>
+  <%= link_to "All Users", users_path,
+  class: "small button radius right", style: "margin-right:5px;" %>
   <% end %>
   <div class="small-centered">
-    <img src="http://i.imgur.com/SjSTIWz.png" alt="freeLanswers" style="width:250px;height:74px;">
+    <img src="http://i.imgur.com/SjSTIWz.png"
+    alt="freeLanswers" style="width:250px;height:74px;">
   </div>
 </div>
 
 <div class="small-12 column background-box">
   <div class="small-12 large-4 left">
     <h1> <%= @user.username %>  </h1>
-    <div class="real-name">Name: <%= @user.first_name %> <%= @user.last_name %></div>
+    <div class="real-name">
+      Name: <%= @user.first_name %> <%= @user.last_name %>
+    </div>
     <div class="user-email">Email: <%= @user.email %></div>
     <% if @user == current_user %>
       <%= link_to "Home", root_path, class: "small button radius left"  %>
-      <%= link_to "Add to your skills list", skills_path, class: "small button radius", style: "margin-left:5px;" %>
+      <%= link_to "Add to your skills list", skills_path,
+      class: "small button radius", style: "margin-left:5px;" %>
       <div class="small-12">
         <section class="block-list">
           <header>Your Skills</header>
           <ul id="ajax-list">
             <% @userskills.each do |userskill| %>
-            <li><%= userskill.skill.name %>: <%= userskill.endorsements.count %></li>
+            <li>
+              <%= userskill.skill.name %>: <%= userskill.endorsements.count %>
+            </li>
             <% end %>
           </ul>
         </section>
       </div>
     <% else %>
       <%= link_to "Home", root_path, class: "small button radius left"  %>
-      <%= link_to "Your Profile", user_path(current_user.id), class: "small button radius", style: "margin-left:5px;" %>
+      <%= link_to "Your Profile", user_path(current_user.id),
+      class: "small button radius", style: "margin-left:5px;" %>
       <div class="small-12">
         <section class="block-list">
           <header><%= @user.username %>'s Skills</header>
           <ul id="ajax-list">
             <% @userskills.each do |userskill| %>
-            <li id="endorsements-<%= userskill.id %>"><%= userskill.skill.name %>: <%= userskill.endorsements.count %> </li>
+            <li id="endorsements-<%= userskill.id %>">
+              <%= userskill.skill.name %>: <%= userskill.endorsements.count %> </li>
             <a href="#" class="profile-skill" user-id="<%= current_user.id %>"
               userskill-id="<%= userskill.id %>"
               id="user-skill-<%= userskill.id %>" >Endorse</a>
@@ -47,5 +58,7 @@
     <% end %>
   </div>
 
-  <div class="charts block small-12 large-8 right" id="container" style="width: 700px; height: 550px; margin: 0 auto"></div>
+  <div class="charts block small-12 large-8 right"
+  id="container" style="width: 700px; height: 550px; margin: 0 auto">
+  </div>
 </div>

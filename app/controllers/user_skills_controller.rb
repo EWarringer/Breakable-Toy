@@ -5,7 +5,6 @@ class UserSkillsController < ApplicationController
       user_id: user_skill_params[:userId],
       skill_id: user_skill_params[:skillId]
     )
-
     render json: user_skill.skill
   end
 

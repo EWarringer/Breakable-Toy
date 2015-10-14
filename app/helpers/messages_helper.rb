@@ -4,6 +4,7 @@ module MessagesHelper
   end
 
   def message_interlocutor(message)
-    message.user == message.conversation.sender ? message.conversation.sender : message.conversation.recipient
+    message.user == message.conversation.sender ? message.conversation.sender
+    : message.conversation.recipient
   end
 end

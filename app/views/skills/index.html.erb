@@ -1,9 +1,13 @@
 <div class="small-3 column">
   <div class="side-bar" style="text-align:center;">
-    <img id="fl-img-sidebar" src="http://i.imgur.com/SjSTIWz.png" alt="freeLanswers" style="width:250px;height:70px;">
+    <img class="fl-img-sidebar" src="http://i.imgur.com/SjSTIWz.png"
+    alt="freeLanswers" style="width:250px;height:70px;">
     <div style="margin-left: 0px; padding-top: 20px; font-size: 20pt;">
-      <%= link_to "Home", root_path, {style: 'color: black; border-bottom-style: solid; border-bottom-width: 1px;'} %>  |
-      <%= link_to "Profile", user_path(current_user.id), {style:'color: black; border-bottom-style: solid; border-bottom-width: 1px;'} %>
+      <%= link_to "Home", root_path, {style: 'color: black;
+        border-bottom-style: solid; border-bottom-width: 1px;'} %>  |
+      <%= link_to "Profile", user_path(current_user.id),
+      {style:'color: black; border-bottom-style: solid;
+        border-bottom-width: 1px;'} %>
     </div>
   </div>
   <div class="side-bar" id="ajax-call">
@@ -21,16 +25,22 @@
 <div class="small-9 column">
   <div class="row">
     <div class="background-box left-margin">
-      <h3 class="skill-select" style="margin-bottom: 30px;">Select your skills below</h3>
+      <h3 class="skill-select" style="margin-bottom: 30px;">
+        Select your skills below
+      </h3>
       <ul class="accordion" data-accordion role="tablist">
         <% @categories.each do |category| %>
           <li class="accordion-navigation">
-            <a href="#panel<%= category.id %>d" class="skill-panel" role="tab" id="panel<%= category.id %>d-heading" aria-controls="panel<%= category.id %>d"><%= category.name %></a>
-            <div id="panel<%= category.id %>d" class="content circle" role="tabpanel" aria-labelledby="panel<%= category.id %>d-heading">
+            <a href="#panel<%= category.id %>d" class="skill-panel"
+              role="tab" id="panel<%= category.id %>d-heading"
+              aria-controls="panel<%= category.id %>d"><%= category.name %></a>
+            <div id="panel<%= category.id %>d" class="content circle"
+              role="tabpanel" aria-labelledby="panel<%= category.id %>d-heading">
               <ul class="small-block-grid-4">
                 <% category.skills.each do |skill| %>
                 <li class="skill-item">
-                  <a href="#" class="a-skill" style="font-size:12pt" user-id="<%= current_user.id %>"
+                  <a href="#" class="a-skill" style="font-size:12pt"
+                  user-id="<%= current_user.id %>"
                     skill-id="<%= skill.id %>"
                     id="skill-check-<%= skill.id %>"><%= skill.name %></a>
                 </li>

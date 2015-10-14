@@ -5,8 +5,6 @@ class QuestionSkillsController < ActiveRecord::Base
       question_id: question_skill_params[:questionId],
       skill_id: question_skill_params[:skillId]
     )
-    binding.pry
-
     render json: question_skill.skill
   end
 
