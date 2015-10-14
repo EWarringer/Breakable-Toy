@@ -17,9 +17,9 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.create(
-    body: question_params[:body],
-    description: question_params[:description],
-    user: current_user
+      body: question_params[:body],
+      description: question_params[:description],
+      user: current_user
     )
     redirect_to @question
   end
