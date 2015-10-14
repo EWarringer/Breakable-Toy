@@ -1,6 +1,6 @@
 class Endorsement < ActiveRecord::Base
   belongs_to :user
   belongs_to :user_skill
-  validates_presence_of :user_id
-  validates_presence_of :user_skill_id
+  validates :user_id, presence: true
+  validates :user_skill_id, presence: true
 end

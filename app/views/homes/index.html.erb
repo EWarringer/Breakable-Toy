@@ -1,14 +1,19 @@
 <div class="small-12 column background-box">
   <% if user_signed_in? %>
-  <%= link_to "Profile", user_path(current_user.id), class: "small button radius right" %>
-  <%= link_to "List of skills", skills_path, class: "small button radius right", style: "margin-right:5px;" %>
-  <%= link_to "All Users", users_path, class: "small button radius right", style: "margin-right:5px;" %>
+  <%= link_to "Profile", user_path(current_user.id),
+  class: "small button radius right" %>
+  <%= link_to "List of skills", skills_path,
+  class: "small button radius right", style: "margin-right:5px;" %>
+  <%= link_to "All Users", users_path,
+  class: "small button radius right", style: "margin-right:5px;" %>
   <% end %>
   <div class="small-centered">
-    <img src="http://i.imgur.com/SjSTIWz.png" alt="freeLanswers" style="width:250px;height:74px;">
+    <img src="http://i.imgur.com/SjSTIWz.png"
+    alt="freeLanswers" style="width:250px;height:74px;">
   </div>
 </div>
 
 <div class="small-12 column background-box">
- <%= link_to "Ask a question now!", new_question_path, {class: "button expand"} %>
+  <%= link_to "Ask a question now!",
+  new_question_path, {class: "button expand"} %>
 </div>

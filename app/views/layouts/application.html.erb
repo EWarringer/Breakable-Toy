@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
   <title>FreelAnswers</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome'\
+  '/4.1.0/css/font-awesome.min.css' %>
+  <meta content='<%= user_signed_in? ? current_user.id : "" %>'
+  name='user-id'/>
 </head>
 <body>
 
@@ -17,7 +21,8 @@
     <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to 'Sign Out',
+            destroy_user_session_path, method: :delete %></li>
         <%- else -%>
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
           <li><%= link_to 'Sign In', new_user_session_path %></li>
@@ -27,18 +32,18 @@
   </nav>
 
   <div class="row">
-  <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
-      <%= value %>
+    <div class=".flash-messages">
+      <%- flash.each do |key, value| -%>
+        <div class="flash flash-<%= key %>">
+          <%= value %>
+        </div>
+      <%- end -%>
     </div>
-  <%- end -%>
 
   <%= yield %>
 
   </div>
   <%= javascript_include_tag 'application' %>
-  <!-- <script src="http://code.highcharts.com/highcharts.js"></script> -->
-  <!-- <script src="http://code.highcharts.com/modules/exporting.js"></script> -->
   <%= yield :extra_footer %>
 </body>
 </html>

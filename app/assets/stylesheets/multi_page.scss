@@ -1,0 +1,27 @@
+$base        : #AAAAAA;
+$secondary-color: white;
+
+.flash {
+  background-color: maroon;
+  color: white;
+  font-size: 14pt;
+}
+
+body {
+  background: image-url(twe_background) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.background-box {
+  background-color: $secondary-color;
+  border: 50px $secondary-color solid;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.left-margin {
+  margin-left: 20px;
+}
