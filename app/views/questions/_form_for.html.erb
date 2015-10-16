@@ -11,131 +11,19 @@
     <%= f.text_area :description, rows: 10 %>
   </div>
 
-  <select data-placeholder="Select Tags to Filter By" style="width:350px;" multiple class="chosen-select" id="tag-select" tabindex="8">
-      <!-- <option value=""></option> -->
-      <option id="1">Ruby</option>
-      <option id="2">CSS</option>
-      <option id="3">Rails</option>
-      <option id="4">HTML</option>
-      <option id="5">Front End</option>
-      <option id="6">SQL</option>
-
-  </select>
-
-  <select data-placeholder="Your Favorite Football Team" style="width:350px;" class="chosen-select" multiple tabindex="5">
+  <select data-placeholder="list the skills required!" style="width:100%;margin 20px" class="chosen-select" multiple tabindex="5">
     <option value=""></option>
-    <optgroup label="NFC EAST">
-      <option>Dallas Cowboys</option>
-      <option>New York Giants</option>
-      <option>Philadelphia Eagles</option>
-      <option>Washington Redskins</option>
-    </optgroup>
-    <optgroup label="NFC NORTH">
-      <option>Chicago Bears</option>
-      <option>Detroit Lions</option>
-      <option>Green Bay Packers</option>
-      <option>Minnesota Vikings</option>
-    </optgroup>
-    <optgroup label="NFC SOUTH">
-      <option>Atlanta Falcons</option>
-      <option>Carolina Panthers</option>
-      <option>New Orleans Saints</option>
-      <option>Tampa Bay Buccaneers</option>
-    </optgroup>
-    <optgroup label="NFC WEST">
-      <option>Arizona Cardinals</option>
-      <option>St. Louis Rams</option>
-      <option>San Francisco 49ers</option>
-      <option>Seattle Seahawks</option>
-    </optgroup>
-    <optgroup label="AFC EAST">
-      <option>Buffalo Bills</option>
-      <option>Miami Dolphins</option>
-      <option>New England Patriots</option>
-      <option>New York Jets</option>
-    </optgroup>
-    <optgroup label="AFC NORTH">
-      <option>Baltimore Ravens</option>
-      <option>Cincinnati Bengals</option>
-      <option>Cleveland Browns</option>
-      <option>Pittsburgh Steelers</option>
-    </optgroup>
-    <optgroup label="AFC SOUTH">
-      <option>Houston Texans</option>
-      <option>Indianapolis Colts</option>
-      <option>Jacksonville Jaguars</option>
-      <option>Tennessee Titans</option>
-    </optgroup>
-    <optgroup label="AFC WEST">
-      <option>Denver Broncos</option>
-      <option>Kansas City Chiefs</option>
-      <option>Oakland Raiders</option>
-      <option>San Diego Chargers</option>
-    </optgroup>
+    <% @categories.each do |category| %>
+      <optgroup label="<%= category.name %>">
+        <% category.skills.each do |skill| %>
+          <option><%= skill.name %></option>
+        <% end %>
+      </optgroup>
+    <% end %>
   </select>
-
-  <!-- <div class="small-3 column">
-    <a href="#" class="button success small expand"
-    style="margin-bottom:0px;margin-bottom:15px"
-    data-reveal-id="myModal">Required skills</a>
-    <div id="myModal" class="reveal-modal"
-    data-reveal style="display: block; opacity: 22;
-    visibility: hidden; top: 88px;">
-
-      <div class="row">
-        <div class="background-box-modal">
-          <div class="small-9 column">
-            <div class="row">
-                <h3 class="skill-select"
-                style="margin-bottom: 30px;">Add required skills below</h3>
-                <ul class="accordion" data-accordion role="tablist">
-                  <% @categories.each do |category| %>
-                    <li class="accordion-navigation">
-                      <a href="#panel<%= category.id %>d" class="skill-panel"
-                        role="tab" id="panel<%= category.id %>d-heading"
-                        aria-controls="panel<%= category.id %>d"><%= category.name %></a>
-                      <div id="panel<%= category.id %>d" class="content circle"
-                         role="tabpanel" aria-labelledby="panel<%= category.id %>d-heading">
-                        <ul class="small-block-grid-4">
-                          <% category.skills.each do |skill| %>
-                          <li class="skill-item">
-                            <a href="#" class="b-skill" style="font-size:12pt"
-                              question-id="<%= @question.id %>"
-                              skill-id="<%= skill.id %>"
-                              id="skill-q-<%= skill.id %>"><%= skill.name %></a>
-                          </li>
-                          <% end %>
-                        </ul>
-                      </div>
-                    </li>
-                  <% end %>
-                </ul>
-            </div>
-          </div>
-          <div class="small-3 column">
-            <div class="side-bar" id="ajax-call">
-              <section class="block-list">
-                <header>Required Skills</header>
-                <ul id="ajax-list" style="font-size: 16pt">
-                  <% @questionskills.each do |questionskill| %>
-                  <li><%= questionsskill.skill.name %></li>
-                  <% end %>
-                </ul>
-              </section>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <a class="close-reveal-modal">×</a>
-    </div>
-  </div>
-  <div class="small-3 column panel" style="padding:9px">Skill 1: </div>
-  <div class="small-3 column panel" style="padding:9px">Skill 2: </div>
-  <div class="small-3 column panel" style="padding:9px">Skill 3: </div> -->
 
   <div class="small-12 column">
-    <%= f.submit "Submit", class: "button radius" %>
+    <%= f.submit "Submit", class: "button radius", id: "sub-mit"%>
   </div>
 
 <% end %>
