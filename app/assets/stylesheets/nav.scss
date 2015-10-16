@@ -20,7 +20,7 @@
       border-top: solid 10px #fff;
       border-right: solid 10px transparent; }
     #nav-trigger span:hover {
-      background-color: white }
+      background-color: #663300 }
     #nav-trigger span.open:after {
       border-left: solid 10px transparent;
       border-top: none;
@@ -117,11 +117,3 @@ nav#nav-mobile {
   width:45px;
   height:45px;
 }
-
-nav#nav-main>a:last-of-type {
-  display: block;
-  color: white;
-  padding: 10px 30px; }
-  nav#nav-main>a:last-of-type:hover {
-    background-color: white;
-    color: #fff; }

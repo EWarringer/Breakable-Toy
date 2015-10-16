@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     User.where.not("id = ?", current_user.id).order("created_at DESC")
     @conversations =
     Conversation.involving(current_user).order("created_at DESC")
+    @user = current_user
   end
 
   def show
