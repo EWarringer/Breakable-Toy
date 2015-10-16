@@ -11,25 +11,34 @@
 </head>
 <body>
 
-  <nav class="top-bar">
-    <ul class="title-area">
-      <li class="name">
-        <h1><a href="/">Freelanswers</a></h1>
-      </li>
-    </ul>
+  <nav id="nav-main">
+      <div><img class="navbar-logo small-2 columns" src="http://i.imgur.com/SjSTIWz.png"
+      alt="freeLanswers" style="float:left;width:200px;height:50px;"></div>
+      <%- if current_user -%>
+        <div style="float:right;margin-right:100px;" id="the-a"><a href="/users/<%= @user.id.to_s %>" style="padding-top:5px;">
+          <img class="navbar-user-photo left" src="<%= current_user.photo %>" alt="photo"/>  <h4 style="padding-top:5px; padding-left:10px;color:#663300;" class="right">  <%= @user.name %> </h4> </a></div>
+      <%- end -%>
+        <ul style="margin-right:10px;">
+            <%- if current_user -%>
+              <li><%= link_to 'Home', root_path %></li>
+              <li><%= link_to 'Ask Something', new_question_path %></li>
+              <li><%= link_to 'Browse Questions', questions_path %></li>
+              <li><%= link_to 'Browse Skills', skills_path %></li>
+              <li><%= link_to 'Go to Profile', user_path(current_user) %></li>
+              <li><%= link_to 'Sign Out',
+                destroy_user_session_path, method: :delete %></li>
+            <%- else -%>
+              <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+              <li><%= link_to 'Sign In', new_user_session_path %></li>
+            <%- end -%>
+        </ul>
 
-    <section class="top-bar-section">
-      <ul class="right">
-        <%- if current_user -%>
-          <li><%= link_to 'Sign Out',
-            destroy_user_session_path, method: :delete %></li>
-        <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-        <%- end -%>
-      </ul>
-    </section>
   </nav>
+
+  <div id="nav-trigger">
+      <span>Menu</span>
+  </div>
+  <nav id="nav-mobile"></nav>
 
   <div class="row">
     <div class=".flash-messages">

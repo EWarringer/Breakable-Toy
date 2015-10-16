@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012150657) do
+ActiveRecord::Schema.define(version: 20151016025139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,23 +76,29 @@ ActiveRecord::Schema.define(version: 20151012150657) do
   add_index "user_skills", ["user_id", "skill_id"], name: "index_user_skills_on_user_id_and_skill_id", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name",                          null: false
-    t.string   "last_name",                           null: false
-    t.string   "username",                            null: false
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "first_name",                                                        null: false
+    t.string   "last_name",                                                         null: false
+    t.string   "username"
+    t.string   "email",                  default: "",                               null: false
+    t.string   "encrypted_password",     default: "",                               null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,                                null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                                                        null: false
+    t.datetime "updated_at",                                                        null: false
     t.string   "provider"
     t.string   "uid"
+    t.string   "name",                                                              null: false
+    t.string   "photo",                  default: "http://i.imgur.com/aLpJ7K4.png"
+    t.string   "industry"
+    t.string   "description"
+    t.string   "location"
+    t.string   "linkedin_profile"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

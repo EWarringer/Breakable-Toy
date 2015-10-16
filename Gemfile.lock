@@ -292,6 +292,7 @@ DEPENDENCIES
   private_pub
   pry-rails
   quiet_assets
+  rack (~> 1.6.4)
   rails (= 4.2.4)
   rails_12factor
   rake

@@ -1,21 +1,13 @@
-<div class="small-12 column background-box">
-  <% if user_signed_in? %>
-  <%= link_to "Profile", user_path(current_user.id),
-  class: "small button radius right" %>
-  <%= link_to "List of skills", skills_path,
-  class: "small button radius right", style: "margin-right:5px;" %>
-  <%= link_to "All Users", users_path,
-  class: "small button radius right", style: "margin-right:5px;" %>
-  <% end %>
-  <div class="small-centered">
-    <img src="http://i.imgur.com/SjSTIWz.png"
-    alt="freeLanswers" style="width:250px;height:74px;">
+<div class="small-12 white-marble">
+  <div style="padding-left: 180px;font-size:50pt;font-family:Zapf Chancery, cursive;font-weight:bold;">
+    NEW QUESTION
   </div>
 </div>
 
-<div class="small-12 column background-box">
+<div class="small-12 column blue-marble"></div>
+
+<div class="small-12 column white-marble" style="padding-top: 50px">
   <div class="small-12 column">
-    <h1>Ask a Question</h1>
   </div>
 
   <%= render "form_for" %>
@@ -24,3 +16,4 @@
     <%= link_to "Cancel", root_path %>
   </div>
 </div>
+<div class="small-12 column blue-marble"></div>
