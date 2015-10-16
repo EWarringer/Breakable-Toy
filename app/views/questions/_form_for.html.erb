@@ -10,6 +10,17 @@
     <%= f.label :description %>
     <%= f.text_area :description, rows: 10 %>
   </div>
+  <select data-placeholder="Select Tags to Filter By" style="width:350px;" multiple class="chosen-select" id="tag-select" tabindex="8">
+      <!-- <option value=""></option> -->
+      <option id="1">Ruby</option>
+      <option id="2">CSS</option>
+      <option id="3">Rails</option>
+      <option id="4">HTML</option>
+      <option id="5">Front End</option>
+      <option id="6">SQL</option>
+
+  </select>
+
   <select data-placeholder="Your Favorite Football Team" style="width:350px;" class="chosen-select" multiple tabindex="5">
     <option value=""></option>
     <optgroup label="NFC EAST">
