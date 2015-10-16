@@ -21,69 +21,70 @@ business_legal = Category.create!(name: "Business,"\
 language = Category.create!(name: "Translation & Languages")
 handy_work = Category.create!(name: "Local Jobs & Services")
 other = Category.create!(name: "Other")
+
 User.create(
-  email: "ewarringer@gmail.com",
+  email: "erikwarringer@gmail.com",
+  name: "Erik Warringer",
   first_name: "Erik",
   last_name: "Warringer",
-  username: "Ewarringer",
   password: "something",
   password_confirmation: "something"
 )
 User.create(
-  email: "example@gmail.com",
-  first_name: "Zample",
-  last_name: "Exampleton",
-  username: "MrExample",
+  email: "jefffrasier@gmail.com",
+  name: "Jeff Frasier",
+  first_name: "Jeff",
+  last_name: "Frasier",
   password: "something",
   password_confirmation: "something"
 )
 User.create(
-  email: "jazzmaster7@gmail.com",
-  first_name: "Niles",
-  last_name: "Tavis",
-  username: "NilesTavis52",
+  email: "apaulenzano@gmail.com",
+  name: "Anthony Paulanzano",
+  first_name: "Anthony",
+  last_name: "Paulanzano",
   password: "something",
   password_confirmation: "something"
 )
 User.create!(
-  email: "something@example.com",
-  first_name: "something",
-  last_name: "somethingson",
-  username: "Someone42",
-  password: "12345678",
-  password_confirmation: "12345678"
+  email: "heatherswanson@gmail.com",
+  name: "Heather Swanson",
+  first_name: "Heather",
+  last_name: "Swanson",
+  password: "something",
+  password_confirmation: "something"
 )
 User.create!(
-  email: "chattybot@example.com",
-  first_name: "Chatty",
-  last_name: "Chatterson",
-  username: "Chatty_Bot",
-  password: "12345678",
-  password_confirmation: "12345678"
+  email: "elizajohnson@gmail.com",
+  name: "Alissa Sherlock",
+  first_name: "Alissa",
+  last_name: "Sherlock",
+  password: "something",
+  password_confirmation: "something"
 )
 User.create!(
-  email: "codercode@example.com",
-  first_name: "Code",
-  last_name: "Genius",
-  username: "RailsMyster7",
-  password: "12345678",
-  password_confirmation: "12345678"
+  email: "lanceumbridge@gmail.com",
+  name: "Lance Umbridge",
+  first_name: "Lance",
+  last_name: "Umbridge",
+  password: "something",
+  password_confirmation: "something"
 )
 User.create!(
-  email: "Railsking@example.com",
-  first_name: "Python",
-  last_name: "Genius",
-  username: "PythonMan555",
-  password: "12345678",
-  password_confirmation: "12345678"
+  email: "Railsking@gmail.com",
+  name: "Christian Sanders",
+  first_name: "Christian",
+  last_name: "Sanders",
+  password: "something",
+  password_confirmation: "something"
 )
 User.create!(
-  email: "Future@sern.com",
-  first_name: "John",
-  last_name: "Titor",
-  username: "John_Titor",
-  password: "12345678",
-  password_confirmation: "12345678"
+  email: "TedOliver@gmail.com",
+  name: "Ted Oliver",
+  first_name: "Ted",
+  last_name: "Oliver",
+  password: "something",
+  password_confirmation: "something"
 )
 SkillSeed.dev_skills.each do |skill|
   Skill.create!(name: skill, category: dev)
@@ -168,7 +169,6 @@ Endorsement.create(user_skill_id: 4, user_id: 4)
 Endorsement.create(user_skill_id: 4, user_id: 5)
 Endorsement.create(user_skill_id: 4, user_id: 6)
 Endorsement.create(user_skill_id: 4, user_id: 7)
-Endorsement.create(user_skill_id: 4, user_id: 8)
 Endorsement.create(user_skill_id: 5, user_id: 2)
 Endorsement.create(user_skill_id: 5, user_id: 3)
 Endorsement.create(user_skill_id: 5, user_id: 4)
@@ -214,7 +214,6 @@ Endorsement.create(user_skill_id: 18, user_id: 4)
 Endorsement.create(user_skill_id: 18, user_id: 5)
 Endorsement.create(user_skill_id: 18, user_id: 6)
 Endorsement.create(user_skill_id: 18, user_id: 7)
-Endorsement.create(user_skill_id: 18, user_id: 8)
 Endorsement.create(user_skill_id: 19, user_id: 3)
 Endorsement.create(user_skill_id: 19, user_id: 4)
 Endorsement.create(user_skill_id: 19, user_id: 5)
@@ -224,7 +223,6 @@ Endorsement.create(user_skill_id: 20, user_id: 4)
 Endorsement.create(user_skill_id: 20, user_id: 5)
 Endorsement.create(user_skill_id: 20, user_id: 6)
 Endorsement.create(user_skill_id: 20, user_id: 7)
-Endorsement.create(user_skill_id: 20, user_id: 8)
 Endorsement.create(user_skill_id: 21, user_id: 3)
 Endorsement.create(user_skill_id: 21, user_id: 4)
 Endorsement.create(user_skill_id: 21, user_id: 5)

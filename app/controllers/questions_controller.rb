@@ -2,10 +2,12 @@ class QuestionsController < ApplicationController
   before_action :authenticate_user!
   def index
     @questions = Question.all
+    @user = current_user
   end
 
   def show
     @question = Question.find_by(id: params[:id])
+    @user = current_user
   end
 
   def new
@@ -13,6 +15,7 @@ class QuestionsController < ApplicationController
     @questions = Question.all
     @questionskills = QuestionSkill.where(question: @question)
     @categories = Category.all
+    @user = current_user
   end
 
   def create

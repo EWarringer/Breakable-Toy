@@ -7,4 +7,4 @@ test:
 production:
   server: "http://freelanswerspubserver.herokuapp.com/faye"
   secret_token: "f0869812e8705843c8cfce19cde3284f1b8ca98eed4c0ec1b9c2a0f687183aef"
-  signature_expiration: 3600 # one hour
+  signature_expiration: 86400 # one day

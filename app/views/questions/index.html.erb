@@ -15,7 +15,7 @@
 
 <div class="small-12 column background-box">
   <% @questions.each do |question| %>
-    <li> Question by <%= question.user.username %></li>
+    <li> Question by <%= question.user.name %></li>
     <li> Question: <%= question.body %></li>
     <li> Description: <%= question.description %></li>
     <br>
