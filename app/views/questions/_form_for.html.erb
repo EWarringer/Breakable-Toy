@@ -1,16 +1,18 @@
 <%= form_for @question do |f| %>
   <%= render "layouts/form_errors", object: f.object %>
 
-  <div class="small-12 medium-12 column">
-    <%= f.label :Question %>
+  <div class="small-12 medium-12 column" style="padding-bottom: 20px;">
+    <%= f.label :Question, style: "font-size:20pt" %>
     <%= f.text_field :body %>
   </div>
 
-  <div class="small-12 column">
-    <%= f.label :description %>
+  <div class="small-12 column" style="padding-bottom: 20px;">
+    <%= f.label :description, style: "font-size:20pt" %>
     <%= f.text_area :description, rows: 10 %>
   </div>
+
   
+
   <!-- <div class="small-3 column">
     <a href="#" class="button success small expand"
     style="margin-bottom:0px;margin-bottom:15px"

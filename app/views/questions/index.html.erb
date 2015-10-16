@@ -1,8 +1,8 @@
-<div class="small-12 column background-box">
-  
+<div class="small-12 column blue-marble">
+
 </div>
 
-<div class="small-12 column background-box">
+<div class="small-12 column white-marble">
   <% @questions.each do |question| %>
     <li> Question by <%= question.user.name %></li>
     <li> Question: <%= question.body %></li>
@@ -10,3 +10,4 @@
     <br>
   <% end %>
 </div>
+<div class="small-12 column blue-marble"></div>

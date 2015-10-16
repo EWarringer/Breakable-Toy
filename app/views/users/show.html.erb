@@ -7,8 +7,9 @@
   <h2>Email: <%= @user.email %> </h2>
   </div>
 </div>
+<br><br><br>
 
-<div class="small-12 column white-marble">
+<div class="small-12 column white-marble" style="margin-top:50px">
   <div class="small-12 large-4 left">
     <% if @user == current_user %>
       <%= link_to "Add to your skills list", skills_path,
@@ -48,6 +49,6 @@
   </div>
 
   <div class="charts block small-12 large-8 right"
-  id="container" style="width: 820px; height: 600px; margin: 0 auto">
+  id="container" style="width: 605px; height: 490px; margin: 0 auto">
   </div>
 </div>
