@@ -18,6 +18,7 @@
 //= require foundation
 //= require chat
 //= require private_pub
+//= require chosen/chosen.jquery.min.js
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

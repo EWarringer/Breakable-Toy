@@ -23,8 +23,8 @@
               <li><%= link_to 'Home', root_path %></li>
               <li><%= link_to 'Ask Something', new_question_path %></li>
               <li><%= link_to 'Browse Questions', questions_path %></li>
-              <li><%= link_to 'Browse Questions', questions_path %></li>
               <li><%= link_to 'Browse Skills', skills_path %></li>
+              <li><%= link_to 'Go to Profile', user_path(current_user) %></li>
               <li><%= link_to 'Sign Out',
                 destroy_user_session_path, method: :delete %></li>
             <%- else -%>
