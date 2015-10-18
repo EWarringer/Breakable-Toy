@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true
-  validates :name, presence: true
   has_many :endorsements
   has_many :user_skills
   has_many :questions
@@ -16,11 +15,15 @@ class User < ActiveRecord::Base
     :trackable, :validatable,
     :omniauthable, :omniauth_providers => [:linkedin]
 
+  def name
+    name = "#{first_name} #{last_name}"
+    name
+  end
+
   def self.find_for_oauth(auth)
     find_or_create_by(email: auth.info.email) do |user|
       #everything that a user must have
       user.email = auth.info.email
-      user.name = auth.info.name
       user.first_name = auth.info.first_name
       user.last_name = auth.info.last_name
       user.password = Devise.friendly_token[0,20]
@@ -34,7 +37,6 @@ class User < ActiveRecord::Base
 
   def update_from_omniauth(auth)
     self.email = auth.info.email
-    self.name = auth.info.name
     self.first_name = auth.info.first_name
     self.last_name = auth.info.last_name
     self.photo = auth.info.image

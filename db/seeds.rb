@@ -24,7 +24,6 @@ other = Category.create!(name: "Other")
 
 User.create(
   email: "erikwarringer@gmail.com",
-  name: "Erik Warringer",
   first_name: "Erik",
   last_name: "Warringer",
   password: "something",
@@ -32,7 +31,6 @@ User.create(
 )
 User.create(
   email: "jefffrasier@gmail.com",
-  name: "Jeff Frasier",
   first_name: "Jeff",
   last_name: "Frasier",
   password: "something",
@@ -40,7 +38,6 @@ User.create(
 )
 User.create(
   email: "apaulenzano@gmail.com",
-  name: "Anthony Paulanzano",
   first_name: "Anthony",
   last_name: "Paulanzano",
   password: "something",
@@ -48,7 +45,6 @@ User.create(
 )
 User.create!(
   email: "heatherswanson@gmail.com",
-  name: "Heather Swanson",
   first_name: "Heather",
   last_name: "Swanson",
   password: "something",
@@ -56,7 +52,6 @@ User.create!(
 )
 User.create!(
   email: "elizajohnson@gmail.com",
-  name: "Alissa Sherlock",
   first_name: "Alissa",
   last_name: "Sherlock",
   password: "something",
@@ -64,7 +59,6 @@ User.create!(
 )
 User.create!(
   email: "lanceumbridge@gmail.com",
-  name: "Lance Umbridge",
   first_name: "Lance",
   last_name: "Umbridge",
   password: "something",
@@ -72,7 +66,6 @@ User.create!(
 )
 User.create!(
   email: "Railsking@gmail.com",
-  name: "Christian Sanders",
   first_name: "Christian",
   last_name: "Sanders",
   password: "something",
@@ -80,7 +73,6 @@ User.create!(
 )
 User.create!(
   email: "TedOliver@gmail.com",
-  name: "Ted Oliver",
   first_name: "Ted",
   last_name: "Oliver",
   password: "something",

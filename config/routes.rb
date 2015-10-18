@@ -1,15 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
 
-  authenticated :user do
-    root 'homes#index'
-  end
+  root 'homes#index'
 
-  unauthenticated :user do
-    devise_scope :user do
-      get "/" => "devise/sessions#new"
-    end
-  end
+  get "/" => "devise/sessions#new"
+
 
   resources :conversations do
     resources :messages
