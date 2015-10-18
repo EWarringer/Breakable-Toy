@@ -7,53 +7,60 @@
   <h2 style="font-family:Zapf Chancery;"><a style="color:#555555;"><%= @user.industry %> | <%= @user.email %></a> </h2>
   </div>
 </div>
+
 <div class="small-12 column blue-marble"></div>
 
 <div class="small-12 column white-marble" style="margin-top:50px">
-  <div class="small-12 large-3 left">
-    <% if @user == current_user %>
-      <div class="small-12">
-        <section class="block-list">
-          <div style="font-family:Zapf Chancery;font-size:30pt">Your Skills</div>
-            <div style="margin-left:5px;margin-bottom:20px"><%= link_to "Add to your skills list", skills_path %></div>
-            <div id="profilelist">
-            <ul id="ajax-list">
-              <div id="profilelistheader" style><a href="#" class="endorsenumber" style="color:black;background-color:skyblue;">Skill</a> | Endorsements</div>
-              <% @userskills.each do |userskill| %>
+  <% if @user == current_user %>
+    <div class="small-12">
+      <section class="block-list">
+        <div style="font-family:Zapf Chancery;font-size:30pt">Your Skills</div>
+          <div style="margin-left:5px;margin-bottom:20px"><%= link_to "Add to your skills list", skills_path %></div>
+          <div id="profilelist">
+          <ul id="ajax-list">
+            <div id="profilelistheader" class="left"><a href="#" class="endorsenumber" style="color:black;background-color:skyblue;"># of Endorsements</a> | Skill</div>
+            <div id="profilelistheader" class="right"> Endorsers </div>
+            <br clear="all"/>
+            <% @userskills.each do |userskill| %>
               <li>
                 <a href="#" class="endorsenumber" style="color:black;background-color:skyblue;"><%= userskill.endorsements.count %></a> | <%= userskill.skill.name %>
+                <% userskill.endorsements.each do |endorsement| %>
+                  <a href="/users/<%= endorsement.user.id %>" class="endorserphoto right"> <img src="<%= endorsement.user.photo %>" class="endorserphoto" alt="photo"/> </a>
+                <% end %>
               </li>
-              <% end %>
-            </ul>
-          </div>
-        </section>
-      </div>
-    <% else %>
-      <%= link_to "Back to Your Profile", @user, style: "margin-left:5px;" %>
-      <div class="small-12">
-        <section class="block-list">
-          <div style="font-family:Zapf Chancery;font-size:20pt"><%= @user.name %>'s Skills</div>
-          <div id="profilelist">
-            <ul id="ajax-list">
-              <% @userskills.each do |userskill| %>
-              <li id="endorsements-<%= userskill.id %>">
-                <a href="#" class="endorsenumber" style="color:black;background-color:skyblue;"><%= userskill.endorsements.count %></a> | <%= userskill.skill.name %>
-              </li>
-              <a href="#" class="profile-skill" user-id="<%= current_user.id %>"
-                userskill-id="<%= userskill.id %>"
-                id="user-skill-<%= userskill.id %>" style="margin-bottom:10px;">Endorse</a>
-              <br>
-              <% end %>
-            </ul>
-          </div>
-        </section>
-      </div>
-    <% end %>
-  </div>
+            <% end %>
+          </ul>
+        </div>
+      </section>
+    </div>
+  <% else %>
+    <%= link_to "Back to Your Profile", @user, style: "margin-left:5px;" %>
+    <div class="small-12">
+      <section class="block-list">
+        <div style="font-family:Zapf Chancery;font-size:20pt"><%= @user.name %>'s Skills</div>
+        <div id="profilelist">
+          <ul id="ajax-list">
+            <% @userskills.each do |userskill| %>
+            <li id="endorsements-<%= userskill.id %>">
+              <a href="#" class="endorsenumber" style="color:black;background-color:skyblue;"><%= userskill.endorsements.count %></a> | <%= userskill.skill.name %>
+            </li>
+            <a href="#" class="profile-skill" user-id="<%= current_user.id %>"
+              userskill-id="<%= userskill.id %>"
+              id="user-skill-<%= userskill.id %>" style="margin-bottom:10px;">Endorse</a>
+            <br>
+            <% end %>
+          </ul>
+        </div>
+      </section>
+    </div>
+  <% end %>
+
+  <div class="small-12 column blue-marble"></div>
 
   <div class="charts block small-12 large-9 right"
-  id="container" style="width: 605px; height: 580px; margin: 0 auto">
+  id="container" style="width: 900px; height: 700px; margin: 0 auto; padding-right: 75px; padding-top:50px;">
   </div>
 </div>
+
 
 <div class="small-12 column blue-marble"></div>

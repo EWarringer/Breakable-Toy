@@ -10,6 +10,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    @userskills = UserSkill.where(user: @user)
+    UserSkill.all.each do |userskill|
+      userskill.endorsement_count = userskill.endorsements.count
+      userskill.save
+    end
+
+    @userskills = UserSkill.where(user: @user).order(endorsement_count: :desc)
   end
 end
