@@ -1,0 +1,60 @@
+#profilelist ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#profilelist li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+#profilelist li:last-child {
+  border: none;
+}
+
+#profilelist li {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 100%;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+#profilelist li:hover {
+  font-size: 30px;
+  background: #f6f6f6;
+}
+
+#profilelistheader {
+  font-weight: bold;
+  font-size: 15pt;
+  margin-bottom: 20px
+}
+
+.endorsenumber {
+  border-style: solid;
+  padding: 0px 20px 0px 20px;
+  border-color: gray;
+  border-width: 1px;
+  // box-shadow: 10px 5px 50px 0px #000000;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+}
+
+#profpic {
+  margin:25px;
+  float:left;
+  width:120px;
+  height:120px;
+  border-color:gray;
+  border-style:solid;
+  border-width:1px;
+  padding: 5px
+}

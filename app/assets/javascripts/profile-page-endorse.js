@@ -13,7 +13,7 @@ $(".profile-skill").click(function(e) {
         } }
       }).done(function(resp) {
         $("#endorsements-" + userSkillId).
-        html( resp.skill + ": " + resp.count);
+        html('<a href="#" class="endorsenumber" style="color:black;background-color:skyblue;">' + resp.count + '</a> | ' + resp.skill);
         $("#user-skill-" + userSkillId).
         html( resp.endorseButton );
       });

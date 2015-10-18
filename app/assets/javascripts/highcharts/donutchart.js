@@ -1,7 +1,7 @@
 $(function () {
 
     var colors = Highcharts.getOptions().colors,
-        categories = ['Web developer, IT & Softward', 'Mobile Phones & Content', 'Writing & Content', 'Design, Media & Architecture', 'Data Entry & Admin', 'Engineering & Science', 'Product Sourcing & Manufacturing', 'Sales & Marketing', 'Business, Accounting, HR & Legal', 'Translations & Languages', 'Local Jobs & Services', 'Other'],
+        categories = ['Web developer, IT & Softward', 'Mobile Phones & Content', 'Writing & Content', 'Design, Media & Architecture', 'Data Entry & Admin', 'Engineering & Science', 'Product Sourcing & Manufacturing', 'Sales & Marketing', 'Other', 'Translations & Languages', 'Local Jobs & Services', 'Business, Accounting, HR & Legal'],
         data = [{
             y: 48,
             color: colors[1],
@@ -66,13 +66,13 @@ $(function () {
                 color: colors[6]
             }
         }, {
-            y: 15,
-            color: colors[2],
+            y: 11,
+            color: colors[7],
             drilldown: {
-                name: 'Sales & Marketing',
-                categories: ['Affiliate Marketing', 'Facebook Marketing', 'Etsy', 'eBay', 'Branding'],
-                data: [2, 4, 7, 2, 0],
-                color: colors[2]
+                name: 'Other',
+                categories: ['History'],
+                data: [11],
+                color: colors[7]
             }
         }, {
             y: 8,
@@ -102,13 +102,13 @@ $(function () {
                 color: colors[10]
             }
         }, {
-            y: 11,
-            color: colors[7],
+            y: 15,
+            color: colors[2],
             drilldown: {
-                name: 'Other',
-                categories: ['History'],
-                data: [11],
-                color: colors[7]
+                name: 'Sales & Marketing',
+                categories: ['Affiliate Marketing', 'Facebook Marketing', 'Etsy', 'eBay', 'Branding'],
+                data: [2, 4, 7, 2, 0],
+                color: colors[2]
             }
 
         }],

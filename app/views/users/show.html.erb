@@ -1,55 +1,58 @@
 <div class="small-12 column white-marble">
   <div class="profpic">
-    <img src="<%= current_user.photo %>" style="margin:25px;float:left;width:100px;height:100px;" alt="photo" />
+    <img src="<%= @user.photo %>" id="profpic" alt="photo"/>
   </div>
   <div>
-  <h1 style="font-family:Zapf Chancery;font-weight:bold;"> <%= @user.name %>  </h1>
-  <h2 style="font-family:Zapf Chancery;">Email: <%= @user.email %> </h2>
+  <h1 style="font-family:Zapf Chancery;font-weight:bold;margin-top:20px;"> <%= @user.name %>  </h1>
+  <h2 style="font-family:Zapf Chancery;"><a style="color:#555555;"><%= @user.industry %> | <%= @user.email %></a> </h2>
   </div>
 </div>
 <div class="small-12 column blue-marble"></div>
 
 <div class="small-12 column white-marble" style="margin-top:50px">
-  <div class="small-12 large-4 left">
+  <div class="small-12 large-3 left">
     <% if @user == current_user %>
-      <%= link_to "Add to your skills list", skills_path,
-      class: "small button radius", style: "margin-left:5px;" %>
       <div class="small-12">
         <section class="block-list">
-          <header>Your Skills</header>
-          <ul id="ajax-list">
-            <% @userskills.each do |userskill| %>
-            <li>
-              <%= userskill.skill.name %>: <%= userskill.endorsements.count %>
-            </li>
-            <% end %>
-          </ul>
+          <div style="font-family:Zapf Chancery;font-size:30pt">Your Skills</div>
+            <div style="margin-left:5px;margin-bottom:20px"><%= link_to "Add to your skills list", skills_path %></div>
+            <div id="profilelist">
+            <ul id="ajax-list">
+              <div id="profilelistheader" style><a href="#" class="endorsenumber" style="color:black;background-color:skyblue;">Skill</a> | Endorsements</div>
+              <% @userskills.each do |userskill| %>
+              <li>
+                <a href="#" class="endorsenumber" style="color:black;background-color:skyblue;"><%= userskill.endorsements.count %></a> | <%= userskill.skill.name %>
+              </li>
+              <% end %>
+            </ul>
+          </div>
         </section>
       </div>
     <% else %>
-      <%= link_to "Home", root_path, class: "button-expand"  %>
-      <%= link_to "Your Profile", user_path(current_user.id),
-      class: "button expand", style: "margin-left:5px;" %>
+      <%= link_to "Back to Your Profile", @user, style: "margin-left:5px;" %>
       <div class="small-12">
         <section class="block-list">
-          <header><%= @user.name %>'s Skills</header>
-          <ul id="ajax-list">
-            <% @userskills.each do |userskill| %>
-            <li id="endorsements-<%= userskill.id %>">
-              <%= userskill.skill.name %>: <%= userskill.endorsements.count %> </li>
-            <a href="#" class="profile-skill" user-id="<%= current_user.id %>"
-              userskill-id="<%= userskill.id %>"
-              id="user-skill-<%= userskill.id %>" >Endorse</a>
-            <br>
-            <% end %>
-          </ul>
+          <div style="font-family:Zapf Chancery;font-size:20pt"><%= @user.name %>'s Skills</div>
+          <div id="profilelist">
+            <ul id="ajax-list">
+              <% @userskills.each do |userskill| %>
+              <li id="endorsements-<%= userskill.id %>">
+                <a href="#" class="endorsenumber" style="color:black;background-color:skyblue;"><%= userskill.endorsements.count %></a> | <%= userskill.skill.name %>
+              </li>
+              <a href="#" class="profile-skill" user-id="<%= current_user.id %>"
+                userskill-id="<%= userskill.id %>"
+                id="user-skill-<%= userskill.id %>" style="margin-bottom:10px;">Endorse</a>
+              <br>
+              <% end %>
+            </ul>
+          </div>
         </section>
       </div>
     <% end %>
   </div>
 
-  <div class="charts block small-12 large-8 right"
-  id="container" style="width: 605px; height: 490px; margin: 0 auto">
+  <div class="charts block small-12 large-9 right"
+  id="container" style="width: 605px; height: 580px; margin: 0 auto">
   </div>
 </div>
 
