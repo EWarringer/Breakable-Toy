@@ -4,7 +4,7 @@
 
 
 # Breakable-Toy: FreelAnswers
-## (working on errors)
+## fixing bugs on RSpec, OAuth when pushed to heroku, and reorganizing highcharts json
 
 Trello: https://trello.com/b/phvPp362/breakable-toy
 
