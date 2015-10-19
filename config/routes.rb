@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
-
   root 'homes#index'
-
-  get "/" => "homes#index"
-
 
   resources :conversations do
     resources :messages
