@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
-  root 'homes#index'
 
   resources :conversations do
     resources :messages
@@ -14,10 +13,6 @@ Rails.application.routes.draw do
     devise_scope :user do
       get "/" => "devise/sessions#new"
     end
-  end
-
-  resources :conversations do
-    resources :messages
   end
 
   resources :questions, only: [:new, :create, :index, :show]
