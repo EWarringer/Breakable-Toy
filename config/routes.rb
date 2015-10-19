@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'homes#index'
 
-  get "/" => "devise/sessions#new"
+  get "/" => "homes#index"
 
 
   resources :conversations do

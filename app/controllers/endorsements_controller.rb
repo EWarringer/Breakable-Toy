@@ -14,9 +14,12 @@ class EndorsementsController < ApplicationController
       endorse_button = "Endorse"
     end
     user_skill = UserSkill.find_by(id: endorsement_params[:userSkillId])
-    render json: {skill: user_skill.skill.name,
+    render json: {
+      skill: user_skill.skill.name,
       count: user_skill.endorsements.count,
-      endorseButton: endorse_button}
+      endorseButton: endorse_button,
+      photo: current_user.photo
+    }
   end
 
   private

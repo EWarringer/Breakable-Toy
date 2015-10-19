@@ -1,13 +1,27 @@
-<div class="small-12 column blue-marble">
-
-</div>
-
 <div class="small-12 column white-marble">
-  <% @questions.each do |question| %>
-    <li> Question by <%= question.user.name %></li>
-    <li> Question: <%= question.body %></li>
-    <li> Description: <%= question.description %></li>
-    <br>
-  <% end %>
+  <h1 class="question-title">Active Unanswered Questions</h1>
 </div>
-<div class="small-12 column blue-marble"></div>
+
+<div class="small-12 column blue-marble">
+  <table class="gridtable" width="100%">
+    <tr>
+    	<th>Question</th><th width="15%">User</th><th width="5%">Picture</th><th width="20%">time</th><th width="5%">Chat</th>
+    </tr>
+    <% @questions.each do |question| %>
+    <tr>
+    	<td><%= link_to question.body, question %></td>
+      <td><%= question.user.name %></td>
+      <td><img src="<%= question.user.photo %>" style="width:40px;height:40px;" alt="photo"/></td>
+      <td><%= question.created_at %></td>
+      <td style="padding: 2px;">
+        <div style="background-color:white;padding: 3px 2px 3px 4px;border-radius:25px; margin: 0;">
+          <%= link_to "💬", "#",
+          class: "btn btn-success btn-xs start-conversation button small success",
+            style: "font-size:25pt;padding:0px 4px 0px 5px;border-radius:25px;margin-bottom:0;", "data-sid" => current_user.id, "data-rip" => question.user.id %>
+        </div>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+
+</div>

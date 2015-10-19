@@ -11,16 +11,19 @@
     <%= f.text_area :description, rows: 10 %>
   </div>
 
-  <select data-placeholder="list the skills required!" style="width:100%;margin 20px" class="chosen-select" multiple tabindex="5">
-    <option value=""></option>
-    <% @categories.each do |category| %>
-      <optgroup label="<%= category.name %>">
-        <% category.skills.each do |skill| %>
-          <option><%= skill.name %></option>
-        <% end %>
-      </optgroup>
-    <% end %>
-  </select>
+  <div class="small-12 column">
+    <%= f.label :required_skills, style: "font-size:20pt" %>
+    <select data-placeholder="list the skills required!" style="width:100%;margin 20px" class="chosen-select" multiple tabindex="5">
+      <option value=""></option>
+      <% @categories.each do |category| %>
+        <optgroup label="<%= category.name %>">
+          <% category.skills.each do |skill| %>
+            <option><%= skill.name %></option>
+          <% end %>
+        </optgroup>
+      <% end %>
+    </select>
+  </div>
 
   <div class="small-12 column">
     <%= f.submit "Submit", class: "button radius", id: "sub-mit"%>

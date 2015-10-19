@@ -29,6 +29,10 @@ gem 'omniauth-linkedin'
 gem 'private_pub'
 gem 'thin'
 gem 'rack', '~> 1.6.4'
+gem 'redcarpet', '1.17.2'
+gem 'gollum'
+gem 'albino'
+gem 'nokogiri'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

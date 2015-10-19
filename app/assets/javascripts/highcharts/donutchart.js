@@ -152,7 +152,7 @@ $(function () {
             text: 'Endorsments Pie Chart'
         },
         subtitle: {
-            text: 'for user: Erik Warringer'
+            text: ''
         },
         yAxis: {
             title: {
