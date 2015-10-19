@@ -14,8 +14,9 @@
   <% if @user == current_user %>
     <div class="small-12">
       <section class="block-list">
-        <div style="font-family:Zapf Chancery;font-size:30pt">Your Skills</div>
+        <div style="font-family:Helvetica, Verdana, sans-serif;;font-size:30pt">Your Skills</div>
           <div style="margin-left:5px;margin-bottom:20px"><%= link_to "Add to your skills list", skills_path %></div>
+          <hr>
           <div id="profilelist">
           <ul id="ajax-list">
             <div id="profilelistheader" class="left"><a href="#" class="endorsenumber" style="color:black;background-color:skyblue;"># of Endorsements</a> | Skill</div>
@@ -34,10 +35,17 @@
       </section>
     </div>
   <% else %>
-    <%= link_to "Back to Your Profile", @user, style: "margin-left:5px;" %>
     <div class="small-12">
       <section class="block-list">
-        <div style="font-family:Zapf Chancery;font-size:20pt"><%= @user.name %>'s Skills</div>
+        <div style="font-family:Helvetica, Verdana, sans-serif;;font-size:30pt;color:#333333" class="left"><%= @user.name %>'s Skills</div>
+        <div class="right">
+          <%= link_to "Chat with #{@user.first_name} 💬", "#",
+          class: "btn btn-success btn-xs start-conversation button success round",
+          "data-sid" => current_user.id, "data-rip" => @user.id %>
+        </div>
+        <br clear="all">
+        <%= link_to "Back to Your Profile", @user, style: "margin-left:5px;margin-bottom:20px;", class: "left" %>
+        <hr>
         <div id="profilelist">
           <ul id="ajax-list">
             <% @userskills.each do |userskill| %>

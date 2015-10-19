@@ -2,7 +2,7 @@ $base        : #AAAAAA;
 $secondary-color: white;
 
 .flash {
-  background-color: maroon;
+  background-color: #43AC6A;
   color: white;
   font-size: 14pt;
 }
@@ -75,4 +75,12 @@ body {
   -webkit-text-fill-color: transparent;
   padding-left: 180px;
   font-size: 50pt;
+}
+
+.question-title {
+  color:#333333;
+  padding-left: 130px;
+  font-size:40pt;
+  font-family:Zapf Chancery;
+  font-weight:bold;
 }

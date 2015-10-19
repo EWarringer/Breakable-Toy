@@ -18,7 +18,7 @@
         <div style="float:right;margin-right:100px;" id="the-a"><a href="/users/<%= current_user.id.to_s %>" style="padding-top:5px;">
           <img class="navbar-user-photo left" src="<%= current_user.photo %>" alt="photo"/>  <h4 style="padding-top:5px; padding-left:10px;color:#663300;" class="right">  <%= current_user.name %> </h4> </a></div>
       <%- end -%>
-        <ul style="margin-right:10px;">
+          <ul style="margin-right:250px;">
             <%- if current_user -%>
               <li><%= link_to 'Home', root_path %></li>
               <li><%= link_to 'Ask Something', new_question_path %></li>
@@ -40,14 +40,15 @@
   </div>
   <nav id="nav-mobile"></nav>
 
-  <div class="row">
-    <div class=".flash-messages">
-      <%- flash.each do |key, value| -%>
-        <div class="flash flash-<%= key %>">
-          <%= value %>
-        </div>
-      <%- end -%>
-    </div>
+  <div class=".flash-messages" style="margin:0;font-size:20pt">
+    <%- flash.each do |key, value| -%>
+      <div class="flash flash-<%= key %>">
+        <%= value %>
+      </div>
+    <%- end -%>
+  </div>
+
+  <div class="row" style="margin-top:20px">
 
   <%= yield %>
 

@@ -10,27 +10,29 @@
         border-bottom-width: 1px;'} %>
     </div>
   </div>
-  <div class="side-bar" id="ajax-call">
+  <div class="white-marble" style="background:white;" id="ajax-call">
     <section class="block-list">
-      <header>Your Skills</header>
-      <ul id="ajax-list" style="font-size: 16pt">
-        <% @userskills.each do |userskill| %>
-        <li><%= userskill.skill.name %></li>
-        <% end %>
-      </ul>
+      <div id="profilelist">
+        <h3>Your Skills</h3>
+        <ul id="ajax-list" style="font-size: 16pt">
+          <% @userskills.each do |userskill| %>
+          <li><%= userskill.skill.name %></li>
+          <% end %>
+        </ul>
+      </div>
     </section>
   </div>
 </div>
 
-<div class="small-9 column">
+<div class="small-9 question-title white-marble" style="margin-left: 250px;background:white;">
+  Select your skills below
+</div>
+<div class="small-9 column white-marble" style="background:white;">
   <div class="row">
-    <div class="left-margin">
-      <h3 class="skill-select" style="margin-bottom: 30px;">
-        Select your skills below
-      </h3>
+    <div>
       <ul class="accordion" data-accordion role="tablist">
         <% @categories.each do |category| %>
-          <li class="accordion-navigation">
+          <li class="accordion-navigation" style="border-style: solid;border-color:#DDDDDD;border-width:2px">
             <a href="#panel<%= category.id %>d" class="skill-panel"
               role="tab" id="panel<%= category.id %>d-heading"
               aria-controls="panel<%= category.id %>d"></a>
@@ -39,7 +41,7 @@
               <ul class="small-block-grid-4">
                 <% category.skills.each do |skill| %>
                 <li class="skill-item">
-                  <a href="#" class="a-skill" style="font-size:12pt"
+                  <a href="#" class="a-skill" style="color:#333333; font-size:12pt"
                   user-id="<%= current_user.id %>"
                     skill-id="<%= skill.id %>"
                     id="skill-check-<%= skill.id %>"><%= skill.name %></a>
