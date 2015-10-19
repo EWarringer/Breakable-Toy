@@ -27,56 +27,66 @@ User.create(
   first_name: "Erik",
   last_name: "Warringer",
   password: "something",
-  password_confirmation: "something"
+  password_confirmation: "something",
+  photo: "http://i.imgur.com/cAdhmda.jpg",
+  industry: "Computer Software"
+)
+User.create!(
+  email: "danchandler@gmail.com",
+  first_name: "Dan",
+  last_name: "Chandler",
+  password: "something",
+  password_confirmation: "something",
+  photo: "http://i.imgur.com/7jbQLX4.png",
+  industry: "Technology Sales"
 )
 User.create(
   email: "jefffrasier@gmail.com",
   first_name: "Jeff",
-  last_name: "Frasier",
+  last_name: "Smith",
   password: "something",
-  password_confirmation: "something"
+  password_confirmation: "something",
+  photo: "http://i.imgur.com/KG3GdAi.jpg"
 )
 User.create(
-  email: "apaulenzano@gmail.com",
+  email: "anthonygiordano@gmail.com",
   first_name: "Anthony",
-  last_name: "Paulanzano",
+  last_name: "Giordano",
   password: "something",
-  password_confirmation: "something"
+  password_confirmation: "something",
+  photo: "http://i.imgur.com/nRfZqSU.jpg"
 )
 User.create!(
   email: "heatherswanson@gmail.com",
   first_name: "Heather",
   last_name: "Swanson",
   password: "something",
-  password_confirmation: "something"
+  password_confirmation: "something",
+  photo: "http://i.imgur.com/9ckt7H7.png"
 )
 User.create!(
-  email: "elizajohnson@gmail.com",
+  email: "alissasherlock@gmail.com",
   first_name: "Alissa",
   last_name: "Sherlock",
   password: "something",
-  password_confirmation: "something"
+  password_confirmation: "something",
+  photo: "http://i.imgur.com/u3S3h5Q.png"
 )
 User.create!(
-  email: "lanceumbridge@gmail.com",
+  email: "lancejohnson@gmail.com",
   first_name: "Lance",
-  last_name: "Umbridge",
+  last_name: "Johnson",
   password: "something",
-  password_confirmation: "something"
+  password_confirmation: "something",
+  photo: "http://i.imgur.com/ezQCDBy.png"
 )
 User.create!(
-  email: "Railsking@gmail.com",
-  first_name: "Christian",
-  last_name: "Sanders",
+  email: "andreasanders@gmail.com",
+  first_name: "andrea",
+  last_name: "sanders",
   password: "something",
-  password_confirmation: "something"
-)
-User.create!(
-  email: "TedOliver@gmail.com",
-  first_name: "Ted",
-  last_name: "Oliver",
-  password: "something",
-  password_confirmation: "something"
+  password_confirmation: "something",
+  photo: "http://i.imgur.com/xYWdLCp.png"
 )
 SkillSeed.dev_skills.each do |skill|
   Skill.create!(name: skill, category: dev)
