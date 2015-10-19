@@ -6,8 +6,22 @@ Rails.application.routes.draw do
     resources :messages
   end
 
+  authenticated :user do
+    root 'homes#index'
+  end
+
+  unauthenticated :user do
+    devise_scope :user do
+      get "/" => "devise/sessions#new"
+    end
+  end
+
+  resources :conversations do
+    resources :messages
+  end
+
   resources :questions, only: [:new, :create, :index, :show]
-  resources :users, only: [:index, :show]
+  resources :users, only: [:show]
   resources :skills, only: [:index] do
     resources :user_skills, only: [:create]
     resources :question_skills, only: [:create]
