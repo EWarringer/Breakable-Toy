@@ -28,8 +28,24 @@
               <li><%= link_to 'Sign Out',
                 destroy_user_session_path, method: :delete %></li>
             <%- else -%>
-              <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-              <li><%= link_to 'Sign In', new_user_session_path %></li>
+              <li>
+                <a href="#" data-reveal-id="myModal">
+                  <div>Sign in</div>
+                </a>
+                <div id="myModal" class="reveal-modal" style="padding:0px;margin-top:150px;border-radius: 15px;" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+                  <%= render "devise/sessions/modal" %>
+                  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                </div>
+              </li>
+              <li>
+                <a href="#" data-reveal-id="myModal2">
+                  <div>Sign up</div>
+                </a>
+                <div id="myModal2" class="reveal-modal" style="padding:0px;margin-top 25px;border-radius: 15px;" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+                  <%= render "devise/registrations/modal2" %>
+                  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                </div>
+              </li>
             <%- end -%>
         </ul>
 
