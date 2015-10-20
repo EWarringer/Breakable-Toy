@@ -51,6 +51,9 @@
             <% @userskills.each do |userskill| %>
             <li id="endorsements-<%= userskill.id %>">
               <a href="#" class="endorsenumber" style="color:black;background-color:skyblue;"><%= userskill.endorsements.count %></a> | <%= userskill.skill.name %>
+              <% userskill.endorsements.each do |endorsement| %>
+                <a href="/users/<%= endorsement.user.id %>" class="endorserphoto right"> <img src="<%= endorsement.user.photo %>" class="endorserphoto" alt="photo"/> </a>
+              <% end %>
             </li>
             <a href="#" class="profile-skill" user-id="<%= current_user.id %>"
               userskill-id="<%= userskill.id %>"
