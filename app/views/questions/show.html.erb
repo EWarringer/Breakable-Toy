@@ -1,13 +1,14 @@
 <div class="small-12 column white-marble">
   <h2> <%= @question.body %> </h2>
   <div class="left" style="color:#555555">
-    posted by <%= @question.user.name %> on <%= @question.created_at %>
+      posted by <a href="/users/<%= @question.user.id.to_s %>">Endorse Jeff</a> on <%= @question.created_at %>
   </div>
-  <div class="right">
+  <div class="right" style="margin-left:10px;">
     <%= link_to "Chat with #{@question.user.first_name}", "#",
     class: "btn btn-success btn-xs start-conversation button success round",
     "data-sid" => current_user.id, "data-rip" => @question.user.id %>
   </div>
+    <a href="/users/<%= @question.user.id.to_s %>" class="button round right">Endorse Jeff</a>
 </div>
 <div class="small-12 column white-marble">
   <div class="panel">

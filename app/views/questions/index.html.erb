@@ -11,7 +11,7 @@
     <tr>
     	<td><%= link_to question.body, question %></td>
       <td><%= question.user.name %></td>
-      <td><img src="<%= question.user.photo %>" style="width:40px;height:40px;" alt="photo"/></td>
+      <td><a href="/users/<%= question.user.id.to_s %>" ><img src="<%= question.user.photo %>" style="width:40px;height:40px;" alt="photo"/></a></td>
       <td><%= question.created_at %></td>
       <td style="padding: 2px;">
         <div style="background-color:white;padding: 3px 2px 3px 4px;border-radius:25px; margin: 0;">
@@ -23,5 +23,4 @@
     </tr>
     <% end %>
   </table>
-
 </div>
