@@ -2,6 +2,8 @@
 
 [![Code Climate](https://codeclimate.com/github/EWarringer/Breakable-Toy/badges/gpa.svg)](https://codeclimate.com/github/EWarringer/Breakable-Toy)
 
+-- needs to be completely refactored! I needed to get some of the functionality working in time so there's a lot of styling in the html files that need to be moved over. The testing is also in the process of being completely redone --
+
 Trello: https://trello.com/b/phvPp362/breakable-toy
 
 ## ER Diagram
