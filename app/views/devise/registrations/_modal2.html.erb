@@ -1,4 +1,4 @@
-<div class="small-12 column white-marble">
+<div class="small-12 column white-marble" id="new-user">
   <h2>Sign up</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -10,8 +10,6 @@
       <%= f.input :email, required: true %>
       <%= f.input :password, required: true %>
       <%= f.input :password_confirmation, label: 'Password Confirmation', required: true %>
-      <%= f.input :photo, label: 'Profile Picture URL (change default image below)' %>
-
     </div>
 
     <div class="form-actions">
