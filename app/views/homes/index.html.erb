@@ -2,18 +2,18 @@
 <div class="small-12 column background-box">
   <div class="row">
     <% if current_user %>
-      <div style="margin-top:200px; margin-bottom:300px;">
-        <img src="http://i.imgur.com/SjSTIWz.png"
-        alt="freeLanswers" style="margin-left:22%;width:500px;height:150px;">
+      <div class="homes-logo">
+        <img src="http://i.imgur.com/SjSTIWz.png" alt="freeLanswers">
       </div>
     <% else %>
-    <div style="margin-top:200px; margin-bottom:300px;margin-left:22%;width:500px;height:150px;">
+    <div class="homes-logo">
       <a href="#" data-reveal-id="myModal">
-        <img src="http://i.imgur.com/SjSTIWz.png"
-        alt="freeLanswers">
-        <div style="margin-left:205px;font-size:25px;color:#555555;">Sign in</div>
+        <img src="http://i.imgur.com/SjSTIWz.png" alt="freeLanswers">
+        <div class="homes-links">Sign in</div>
       </a>
-      <div id="myModal" class="reveal-modal" style="padding:0px;margin-top:150px;border-radius: 15px;" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+      <div id="myModal" class="reveal-modal inner-homes"
+      data-reveal aria-labelledby="modalTitle"
+      aria-hidden="true" role="dialog">
         <%= render "devise/sessions/modal" %>
         <a class="close-reveal-modal" aria-label="Close">&#215;</a>
       </div>
