@@ -1,13 +1,11 @@
 <div class="small-3 column">
-  <div class="side-bar" style="text-align:center;">
+  <div class="side-bar">
     <img class="fl-img-sidebar" src="http://i.imgur.com/SjSTIWz.png"
-    alt="freeLanswers" style="width:250px;height:70px;">
-    <div style="margin-left: 0px; padding-top: 20px; font-size: 20pt;">
-      <%= link_to "Home", root_path, {style: 'color: black;
-        border-bottom-style: solid; border-bottom-width: 1px;'} %>  |
+    alt="freeLanswers">
+    <div class="external-links">
+      <%= link_to "Home", root_path, {class: 'skill-links'} %>  |
       <%= link_to "Profile", user_path(current_user.id),
-      {style:'color: black; border-bottom-style: solid;
-        border-bottom-width: 1px;'} %>
+      {class: 'skill-links'} %>
     </div>
   </div>
   <div class="white-marble" style="background:white;" id="ajax-call">

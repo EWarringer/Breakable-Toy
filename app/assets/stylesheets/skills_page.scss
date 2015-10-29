@@ -7,11 +7,20 @@ $secondary-color: #ffffff;
   border-radius: 6px;
   margin-top: 20px;
   padding: 0;
+  text-align: center;
 }
 
 .fl-img-sidebar {
   border-bottom-color: #000000;
   border-bottom-style: dotted;
+  width:250px;
+  height:70px;
+}
+
+.external-links {
+  margin-left: 0px;
+  padding-top: 20px;
+  font-size: 20pt;
 }
 
 .skill-select {
@@ -33,6 +42,10 @@ $secondary-color: #ffffff;
   border-left-color: #663300;
   border-right-style: solid;
   border-left-style: solid;
+}
+
+.skill-links {
+  
 }
 
 #panel1d-heading {
