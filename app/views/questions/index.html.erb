@@ -14,10 +14,10 @@
       <td><a href="/users/<%= question.user.id.to_s %>" ><img src="<%= question.user.photo %>" style="width:40px;height:40px;" alt="photo"/></a></td>
       <td><%= question.created_at %></td>
       <td style="padding: 2px;">
-        <div style="background-color:white;padding: 3px 2px 3px 4px;border-radius:25px; margin: 0;">
+        <div class="questions-2">
           <%= link_to "💬", "#",
           class: "btn btn-success btn-xs start-conversation button small success",
-            style: "font-size:25pt;padding:0px 4px 0px 5px;border-radius:25px;margin-bottom:0;", "data-sid" => current_user.id, "data-rip" => question.user.id %>
+            "data-sid" => current_user.id, "data-rip" => question.user.id %>
         </div>
       </td>
     </tr>
