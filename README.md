@@ -1,8 +1,6 @@
 [ ![Codeship Status for EWarringer/Breakable-Toy](https://codeship.com/projects/6835fdc0-42b4-0133-38f3-1eb5f82d52fc/status?branch=master)](https://codeship.com/projects/103850)
 
-[![Code Climate](https://codeclimate.com/github/EWarringer/Breakable-Toy/badges/gpa.svg)](https://codeclimate.com/github/EWarringer/Breakable-Toy)
-
--- needs to be completely refactored! I needed to get some of the functionality working in time so there's a lot of styling in the html files that need to be moved over. The testing is also in the process of being completely redone --
+-- needs to be refactored! The testing in the process of being redone as well --
 
 Trello: https://trello.com/b/phvPp362/breakable-toy
 
