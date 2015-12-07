@@ -4,6 +4,42 @@
 
 Trello: https://trello.com/b/phvPp362/breakable-toy
 
+#### Sign in with Linkedin OAuth and view profile
+*Linkedin will Automatically grab your name, profile photo, industry, and email address to display at the top of your profile*
+
+![sign_in](http://i.imgur.com/Qt5m2MV.gif)
+
+<br />
+
+#### Select some skills
+*choose from a wide variety of skills to display on your profile*
+
+![select skills](http://i.imgur.com/d0ngthR.gif)
+
+<br />
+
+
+#### Chat with, and endorse others
+*Just like on Linkedin, you can see who has endorsed you for each skill. You may visit their profile by clicking on their picture. While viewing their profile, you may endorse them and/or chat with them directly.*
+
+![sign_in](http://i.imgur.com/Evi5QjI.gif)
+
+<br />
+
+#### Ask a question to the public
+*Asking a question will post it to a public page, styled like a message board with the question, the time it was posted, the user name and photo, and a chat option. From here you can view question descriptions by clicking on the question, or chat with somebody directly. The question descriptions automatically save and display in markdown form.*
+
+![sign_in](http://i.imgur.com/2L7WBOh.gif)
+
+<br />
+
+#### Answer others' questions in real time!
+*You may also chat with somebody directly from their question description page and answer their question in a gmail-like chat.*
+
+![sign_in](http://i.imgur.com/Pi2Xan3.gif)
+
+<br />
+
 ## ER Diagram
 ![alt](http://i.imgur.com/DriIZE7.png)
 
