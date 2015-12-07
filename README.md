@@ -7,7 +7,7 @@ Trello: https://trello.com/b/phvPp362/breakable-toy
 #### Sign in with Linkedin OAuth and view profile
 *Linkedin will Automatically grab your name, profile photo, industry, and email address to display at the top of your profile*
 
-![signin](http://i.imgur.com/gwRi1IA.gif)
+![signin](https://media.giphy.com/media/R5sO9t40K5uhO/giphy.gif)
 
 <br />
 
@@ -22,7 +22,7 @@ Trello: https://trello.com/b/phvPp362/breakable-toy
 #### Chat with, and endorse others
 *Just like on Linkedin, you can see who has endorsed you for each skill. You may visit their profile by clicking on their picture. While viewing their profile, you may endorse them and/or chat with them directly.*
 
-![endorse](http://i.imgur.com/Evi5QjI.gif)
+![endorse](http://i.imgur.com/gwRi1IA.gif)
 
 <br />
 
