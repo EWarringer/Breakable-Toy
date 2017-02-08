@@ -1,6 +1,10 @@
 If you'd like, sign in with:
+
 email: "testuser@test123.com"
+
 password: "password"
+
+<br />
 
 ##### -- needs to be refactored! The testing in the process of being redone as well --
 
