@@ -7,7 +7,7 @@ Trello: https://trello.com/b/phvPp362/breakable-toy
 #### Sign in with Linkedin OAuth and view profile
 *Linkedin will Automatically grab your name, profile photo, industry, and email address to display at the top of your profile*
 
-![sign_in](http://i.imgur.com/Qt5m2MV.gif)
+![sign in](http://i.imgur.com/Qt5m2MV.gif)
 
 <br />
 
