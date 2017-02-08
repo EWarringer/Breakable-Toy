@@ -1,13 +1,15 @@
 [ ![Codeship Status for EWarringer/Breakable-Toy](https://codeship.com/projects/6835fdc0-42b4-0133-38f3-1eb5f82d52fc/status?branch=master)](https://codeship.com/projects/103850)
 
--- needs to be refactored! The testing in the process of being redone as well --
+##### -- needs to be refactored! The testing in the process of being redone as well --
+
+FreeLanswers: http://freelanswers.herokuapp.com/
 
 Trello: https://trello.com/b/phvPp362/breakable-toy
 
 #### Sign in with Linkedin OAuth and view profile
 *Linkedin will Automatically grab your name, profile photo, industry, and email address to display at the top of your profile*
 
-![sign in](http://i.imgur.com/Qt5m2MV.gif)
+![signin](https://media.giphy.com/media/R5sO9t40K5uhO/giphy.gif)
 
 <br />
 
@@ -22,7 +24,7 @@ Trello: https://trello.com/b/phvPp362/breakable-toy
 #### Chat with, and endorse others
 *Just like on Linkedin, you can see who has endorsed you for each skill. You may visit their profile by clicking on their picture. While viewing their profile, you may endorse them and/or chat with them directly.*
 
-![endorse](http://i.imgur.com/Evi5QjI.gif)
+![endorse](http://i.imgur.com/gwRi1IA.gif)
 
 <br />
 
