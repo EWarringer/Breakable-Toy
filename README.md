@@ -1,4 +1,6 @@
-[ ![Codeship Status for EWarringer/Breakable-Toy](https://codeship.com/projects/6835fdc0-42b4-0133-38f3-1eb5f82d52fc/status?branch=master)](https://codeship.com/projects/103850)
+If you'd like, sign in with:
+email: "testuser@test123.com"
+password: "password"
 
 ##### -- needs to be refactored! The testing in the process of being redone as well --
 
